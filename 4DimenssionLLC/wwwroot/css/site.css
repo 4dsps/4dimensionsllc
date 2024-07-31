@@ -2015,6 +2015,7 @@ h2 {
 .modal-header .btn-close {
     position: absolute;
     right: 1rem;
+    color:white!important;
     font-weight: 800;
     font-size: 1.4em;
 }
@@ -2022,7 +2023,7 @@ h2 {
     display: flex;
     flex: 1;
     height: 460px;
-    background-color: #fff;
+  /*  background-color: #fff;*/
     justify-content: center;
     align-items: center;
 }
@@ -2051,23 +2052,29 @@ h2 {
 .logo-Contactus{
     width:10em;
 }
+.p-margin {
+    margin-bottom: 0.5rem!important;
+}
 .left-inner-container {
     height: 100%;
     width: 80%;
     text-align: center;
     line-height: 22px;
 }
-.mdl-height{
-    height:43em;
+.mdl-height {
+    height: 43em;
+    background: #14335c;
+    box-shadow: 0px 5px 20px #00c2cb, 0px 5px 20px #fff;
 }
 input, textarea {
     background-color: #eee;
     border: none;
+    border-radius: 8px;
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
     font-size: 0.8rem;
-    color:black;
+    color: black;
 }
 
     input:focus, textarea:focus {
@@ -2109,7 +2116,7 @@ textarea::placeholder {
     }
 }
 .lg-view {
-   color:black;
+   color:white;
 }
 @media only screen and (min-width: 600px) {
     .sm-view {
