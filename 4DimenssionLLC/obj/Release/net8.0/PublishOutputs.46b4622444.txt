@@ -1,0 +1,7 @@
+D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\PubTmp\Out\4DimensionsLLC.exe
+D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\PubTmp\Out\appsettings.json
+D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\PubTmp\Out\4DimensionsLLC.dll
+D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\PubTmp\Out\4DimensionsLLC.deps.json
+D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\PubTmp\Out\4DimensionsLLC.runtimeconfig.json
+D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\PubTmp\Out\4DimensionsLLC.pdb
