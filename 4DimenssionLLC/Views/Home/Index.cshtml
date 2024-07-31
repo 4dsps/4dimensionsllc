@@ -1,0 +1,760 @@
+﻿@{
+    // ViewData["Title"] = "Home Page";
+}
+
+<!--TITLE-->
+<title>4Dimension LLC</title>
+
+<!--ICON-->
+<link rel="shortcut icon" href="~/logo-ico.ico">
+
+<!--META TAGS-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="author" content="Mahesh">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="" />
+<meta property="og:site_name" content="LEVIOOSA" />
+<head>
+
+<!--EXTERNAL CSS-->
+<link href="~/css/site.css" rel="stylesheet" />
+<!--PLUGIN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fredoka+One&family=Kanit:wght@300&display=swap" rel="stylesheet">
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<!-- Include Toastify library -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</head>
+<body onload="myLoader()">
+	<div class="loading" id="loader">
+	<div class="load">
+	<div class="loader">
+	</div>
+	</div>
+	</div>
+	<!--IF LOADER NEEDED
+	<body onload="myLoader()" style="margin:0;">
+	<div class="loading" id="loader">
+	<div class="load">
+	<div class="loader">
+	</div>
+	</div>
+	</div>
+	<div style="display:none;" id="myDiv" class="animate-bottom">-->
+	<!--NAV-BAR-->
+	<header>
+        <div class="topnav" id="myTopnav">
+			
+			<a class="logo"><img class="logo-2" src="~/images/4dlogo.png" /></a>
+
+			<a id="lblContact" class="order4 scroll-link" href="#Support" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Support</a>
+			<hr role="separator" class="dividerMenu" />
+
+			<a id="lblDispatch" href="#dispatching" class="dropbtn order3 scroll-link">
+				Dispatching Services
+			</a>
+			<hr role="separator" class="dividerMenu" />
+
+			<a id="lblFleet" class="order2 scroll-link" href="#fleetManagement">Fleet Management</a>
+			<hr role="separator" class="dividerMenu" />
+
+			<a id="lblHuman" href="#humanManagement" class="active order1 scroll-link">Human Management</a>
+			
+			<a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
+			</div>
+		
+	</header>
+	<div class="topnav" id="navbar">
+		@* <div class="slide-menu"> *@
+			<a class="logo"><img class="logo-width" src="~/images/4dlogo.png" /></a>
+		<div class="menus">
+			<a href="#Support">Support</a>
+			<a href="#dispatching" class="dropbtn">
+					Dispatching Services
+				</a>
+			
+			<a href="#fleetManagement">Fleet Management</a>
+			<a href="#humanManagement" class="active">Human Management</a>
+
+		</div>
+	@* 	</div> *@
+	</div>
+	<!--MAIN-->
+	<div class="main section" id="humanManagement" >
+       
+		<table>
+			<tr>
+				<td>
+					<section >
+@* 						<h5 class="sub-title">Welcome To 4Dimension LLC</h5>
+ *@						<h1 class="title">Human Management</h1>
+						<p class="human-para">An opportunity to lead as a DSP, you are only as strong as your team of delivery associates. Your leadership won’t just set them up for success on the road today, but wherever their career takes them. Successful candidates are passionate about hiring and coaching, building a strong company culture, and giving back to the community.</p>
+						<a href="#sections" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn1">Explore More</a>
+					</section>
+				</td>
+				<td>
+					<img src="https://i.ibb.co/6R10B7H/main-01.png" class="inline-photo show-on-scroll" alt="INFERNO">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<!--CARDS-->
+	<section class="section0" id="ServiceSection">
+		<div class="cardBannerWidth card banner">
+			<h1 class="title">Our Featured Services</h1>
+			<p class="sub-title float-left">
+				4Dimensions LLC, maintains reasonable fleet of delivery vans and delivery associates. To address sudden increase of delivery packages, we always run with back up of spare van &  delivery associate, big vans are dispatched with assistant as well. We periodicaly execute maintenance schedule of van so on time delivery can be assured and better health status achievement of delivery vans.
+			</p>
+		</div>
+		@* <div class="card inline-photo show-on-scroll">
+			<i class="fa fa-handshake-o"></i>
+			<h3>Consulting Services</h3>
+		</div> *@
+		<div class="card inline-photo show-on-scroll">
+			<div class="row">
+				<div class="col-md-2 mdTop-mblView"><i class="fa fa-users"></i></div>
+				<div class="col-md-10 md10-mblView"><h3 class="mgtoptext">Human Management</h3></div>
+			</div>
+
+		</div>
+		<div class="card inline-photo show-on-scroll">
+			<div class="row">
+				<div class="col-md-2 mdTop-mblView"><i class="fa fa-truck"></i></div>
+				<div class="col-md-10 md10-mblView"><h3 class="mgtoptext">Fleet Management</h3></div>
+			</div>
+			
+			
+		</div>
+		<div class="card inline-photo show-on-scroll">
+			<div class="row">
+				<div class="col-md-2 mdTop-mblView"><i class="fa fa-bus"></i></div>
+				<div class="col-md-10 md10-mblView"><h3 class="mgtoptext">Dispatching Services</h3></div>
+			</div>
+
+		</div>
+		<div class="card inline-photo show-on-scroll">
+			<div class="row">
+				<div class="col-md-2 mdTop-mblView"><i class="fa fa-phone"></i></div>
+				<div class="col-md-10 md10-mblView"><h3 class="mgtoptext">Technical Communication & Support</h3></div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<!--CONTAINER-->
+	<div class="container section" id="fleetManagement">
+		<table>
+			<tr>
+                <td>
+					<img src="~/images/01.webp" class="inline-photo show-on-scroll" alt="About Us">
+				</td>
+				<td>
+@* 					<h6 class="sub-title">Discover Our Company</h6>
+ *@					<h1 class="title">Fleet Management </h1>
+					<p class="fleet-para">
+						4Dimensions LLC, maintains reasonable fleet of delivery vans and delivery associates. To address sudden increase of delivery packages, we always run with back up of spare van &  delivery associate, big vans are dispatched with assistant as well. We periodicaly execute maintenance schedule of van so on time delivery can be assured and better health status achievement of delivery vans.
+					</p>
+					<div class="btn-center mb-4">
+						<a href="#moreaboutus" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn2">Discover More</a>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="container section" id="dispatching" >
+		<table>
+			<tr>
+				
+				<td class="pd-left">
+					<h1 class="title">Dispatching Service </h1>
+					<p class="dispatch-para">4Dimensions LLC, deals with dispatchment of delivery items as well as dispatchment of delivery team which includes the delivery assosciates & delivery vans attached with Amazon as part of fleet team. Dispatchment performance is meatured via standard performance indexes based on pick time and delivery time. We are satisfied , as our customers are more than satisfied with our delivery time, occuracy and team behaviour.d on pick time and delivery time. We are satisfied , as our customers are more than satisfied with our delivery time, occuracy and team behaviour.</p>
+					<div class="btn-center mb-4">
+						<a href="#moreaboutus" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn2">Discover More</a>
+
+					</div>
+				</td>
+                <td>
+					<img src="~/images/r.jpg" class="inline-photo show-on-scroll img-setting" alt="About Us">
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+	<section class="slick" id="moreaboutus">
+		<div class="banner mt-4">
+			<h1 class="title"> Benefits We Offer </h1>
+			<h5 class="sub-title">Bringing New Business solutions and ideas</h5>
+		</div>
+		<table>
+			<tr>
+				<td>
+					<ul>
+						<li>
+							<h3>Human Management Services </h3>
+							<p>Recruitment and Onboarding, Employee Development and Training, Performance Management, Employee Engagement and Well-being. </p>
+						</li>
+						<li>
+							<h3>Effective Fleet Management </h3>
+							<p>Before time fleet management, Preventive corprative management , Planned maintenance. </p>
+						</li>
+						<li>
+							<h3>Favorable Timezone & Cultural Closeness </h3>
+							<p>Situate and smart all human management, fleet management,dispatching services handled and monitor with measureable and axces. </p>
+						</li>
+					</ul>
+				</td>
+				<td>
+					<div class="card inline-photo show-on-scroll">
+						<div class="card_part card_part-one">
+						</div>
+
+						<!-- Photo 2 -->
+						<div class="card_part card_part-two">
+						</div>
+
+						<!-- Photo 3 -->
+						<div class="card_part card_part-three">
+						</div>
+
+						<!-- Photo 4 -->
+						<div class="card_part card_part-four">
+						</div>
+					</div>
+				</td>
+				<td>
+					<ul>
+						<li>
+							<h3>Centres Of Excellence </h3>
+							<p>Driving Innovation,Promoting Best Practices, Fostering Collaboration, Areas of Focus.</p>
+						</li>
+						<li>
+							<h3>Clear, Timely Communication </h3>
+							<p>Delivery Associate, Timely Notification,Before arrival notification and stay connected with customer from delivery packet pickup to doorstep and take picture of packet as delivery proven.</p>
+						</li>
+						<li>
+							<h3>Quick & Easy Start </h3>
+							<p>DSPS can join us as tanet, and can avail all dsps services </p>
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</section>
+
+
+	@* <section id="contact" class="section">
+
+		<h1 class="section-header">contact us</h1>
+
+		<div class="contact-wrapper">
+
+			<!-- left contact page -->
+			<div class="row">
+				<div class="col-md-6">
+				
+			<div id="contact-form"  class="form-horizontal">
+
+				<div class="form-group">
+					<div class="col-sm-12">
+								<input type="text" class="form-control" id="name" placeholder="Name, e.g John Doe" name="name" value="">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-12">
+								<input type="email" class="form-control" id="email" placeholder="Email Address, e.g abc@domain.com" name="email" value="">
+					</div>
+				</div>
+
+						<textarea class="form-control" rows="3" placeholder="Write Email Text" name="message"></textarea>
+				<div class="row btn-center">
+							<div class="cntr">
+								<button class=" send-button" onclick="sendEmail()" id="submit" type="button">
+									SUBMIT
+								</button>
+							</div>
+							
+				</div>
+				
+
+			</div>
+			</div>
+			<!-- left contact page -->
+			<div class="col-md-6">
+				<div class="direct-contact-container">
+					<div class="row mgleft mt-3">
+							<div class="col-md-2 mgtop md2-mblView">
+								<i class="clr fa fa-home" style="font-size:2em;"> - </i>
+							
+						</div>
+							<div class="col-md-10 md10-mblView">
+								<span class="contact-text place1">
+									4DIMENSIONS LLC, 402 Rolling Green Ave New Castle De 19720
+								</span>
+						</div>
+					</div>
+					<div class="row mgleft mt-2">
+							<div class="col-md-2 mgtop md2-mblView">
+								<i class="clr fa fa-phone" style="font-size:2em;"> - </i>
+							
+						</div>
+							<div class="col-md-10 md10-mblView">
+								<span class="contact-text place1">
+									<a href="tel:+1 855 789 4dim" title="give me a call">+1 855 789 4dim, +1 302 522 8869 </a>
+								</span>
+						</div>
+
+					</div>
+					<div class="row mgleft mt-2">
+						<div class="col-md-2 mgtop md2-mblView">
+								<i class="clr fa fa-envelope" style="font-size:2em;"> - </i>
+							
+						</div>
+						<div class="col-md-10 md10-mblView">
+								<span class="contact-text place1">
+									<a href="mailto:info@4dimensionsllc.com" title="send me an email">info@4dimensionsllc.com</a>
+								</span>
+						</div>
+
+					</div>
+						<div>
+							<ul class="social-media-list mt-6">
+								<li>
+									<a href="https://www.facebook.com/profile.php?id=61558886634641" target="_blank" class="contact-icon">
+										<i class="fa fa-facebook faIcon-TableCaption" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.facebook.com/profile.php?id=61558886634641" target="_blank" class="contact-icon">
+										<i class="fa fa-linkedin faIcon-TableCaption" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank" class="contact-icon">
+										<i class="fa fa-twitter faIcon-TableCaption" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#" target="_blank" class="contact-icon">
+										<i class="fa fa-instagram faIcon-TableCaption" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://4dimensionsllc.awsapps.com/auth/?client_id=6b9615ec01be1c8d&redirect_uri=https%3A%2F%2Fwebmail.mail.us-east-1.awsapps.com%2Fworkmail%2F" target="_blank"  class="contact-icon">
+										<i class="fa fa-envelope faIcon-TableCaption" title="Check Your Emails" aria-hidden="true"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					
+				</div>
+
+			</div>
+			</div>
+
+			
+		</div>
+
+	</section> *@
+	<hr class="hr-color" />
+	<!--FOOTER-->
+	<footer>
+		<div class="footer">
+			<section>
+				<p class="title">4DIMENSIONS LLC</p>
+				<p style="font-size:.8rem !important">
+					402 Rolling Green Ave
+				</p>
+				<p style="font-size:.8rem !important">
+					 New Castle DE 19720
+				</p>
+				<p style="font-size:.8rem !important">
+					UAN: +1 855 789 4DIM
+				</p>
+			</section>
+
+			<section class="sectionstyle">
+				<p class="title">QUICK LINKS</p>
+				<p><a href="#humanManagement">Human Management</a></p>
+				<p><a href="#fleetManagement">Fleet Management</a></p>
+				<p><a href="#dispatching">Dispatching Service</a></p>
+			</section>
+
+			<section class="sectionstyle">
+				<p class="title">SUPPORT</p>
+				<p><a href="#ServiceSection">Our Featured Services</a></p>
+				<p><a href="#moreaboutus">Benefits</a></p>
+                @* <p><a target="_blank" title="Check Your Emails" href="https://4dimensionsllc.awsapps.com/auth/?client_id=6b9615ec01be1c8d&redirect_uri=https%3A%2F%2Fwebmail.mail.us-east-1.awsapps.com%2Fworkmail%2F">Emails</a></p>
+				*@				
+				<p><a target="_blank" title="Check Your Emails" href="https://4dimensionsllc.awsapps.com/auth/?client_id=6b9615ec01be1c8d&redirect_uri=https%3A%2F%2Fwebmail.mail.us-east-1.awsapps.com%2Fworkmail%2F">Emails</a></p>
+			</section>
+		</div>
+
+		<div class="sub-footer">
+			Copyright © 2024 4Dimension LLC, All Rights Reserved
+		</div>
+
+		<div class="sub-footer">
+			<ul class="social-media-list mt-6">
+				<li>
+					<a href="https://www.facebook.com/profile.php?id=61558886634641" target="_blank" class="contact-icon">
+						<i class="fa fa-facebook faIcon-TableCaption" aria-hidden="true"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/company/4dimensions-llc" target="_blank" class="contact-icon">
+						<i class="fa fa-linkedin faIcon-TableCaption" aria-hidden="true"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" class="contact-icon">
+						<i class="fa fa-twitter faIcon-TableCaption" aria-hidden="true"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#" target="_blank" class="contact-icon">
+						<i class="fa fa-instagram faIcon-TableCaption" aria-hidden="true"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://wa.me/13025228869" target="_blank" class="contact-icon">
+						<i class="fa fa-whatsapp faIcon-TableCaption" aria-hidden="true"></i>
+					</a>
+				</li>
+
+				<li>
+					<a target="_blank" href="https://4dimensionsllc.awsapps.com/auth/?client_id=6b9615ec01be1c8d&redirect_uri=https%3A%2F%2Fwebmail.mail.us-east-1.awsapps.com%2Fworkmail%2F" class="contact-icon">
+						<i class="fa fa-envelope faIcon-TableCaption" title="Check Your Emails" aria-hidden="true"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+
+
+
+	</div>
+
+	<!-- Button trigger modal -->
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content mdl-height">
+				<div class="modal-header justify-content-center text-center">
+					<h2 class="modal-title lg-view" id="staticBackdropLabel">Contact</h2>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+
+				<div class="modal-body">
+					<div class="container">
+						<div class="form-container">
+							
+							<div class="right-container">
+								<div class="right-inner-container">
+									<form action="#">
+
+										<input type="text" id="first-name" placeholder="First Name" />
+										<input type="text" id="last-name" placeholder="Last Name" />
+										<input type="text" id="father-name" placeholder="Father Name" />
+										<input type="date" id="dob" placeholder="Date Of Birth" />
+										<input type="number" id="contact" placeholder="Contact" />
+										<input type="email" id="email" placeholder="Email" />
+										<textarea id="message" rows="4" placeholder="Message"></textarea>
+
+										<div class="like-container">
+											<button type="button" class="btn" id="green"><i id="toggle-color-btn" class="fa fa-thumbs-up fa-lg default-clr"></i></button>
+
+
+											<div class="heart-react">
+												<i class="icon-set"></i>
+												<span class="txt-span">liked!</span>
+											</div>
+										</div>
+										
+										<div class="button-container">
+											<button type="reset" class="btn-reset">Reset</button>
+											<button type="submit" class="btn-submit">Submit</button>
+										
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!--JAVASCRIPT-->
+
+
+
+	<div class="fixed">
+		<a href="" class="button " id="scroll-up">
+			<div class="buttonDiv bg-b-blue">
+				Home
+			</div>
+		</a>
+		
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+	<script>
+		document.getElementById('green').addEventListener('click', function () {
+			const icon = document.getElementById('toggle-color-btn');
+			if (icon.style.color === 'green') {
+				icon.style.color = ''; // Reset to default color
+			} else {
+				icon.style.color = 'green'; // Set to green
+			}
+		});
+		$(document).ready(function () {
+		
+			$("#lblContact").click(function () {
+				if ($(window).width() < 768) { // Assuming 768 pixels is the threshold for mobile view
+					$(".icon").click();
+				}
+			});
+
+			$("#lblFleet").click(function () {
+				if ($(window).width() < 768) {
+					$(".icon").click();
+				}
+			});
+
+			$("#lblHuman").click(function () {
+				if ($(window).width() < 768) {
+					$(".icon").click();
+				}
+			});
+
+			$("#lblDispatch").click(function () {
+				if ($(window).width() < 768) {
+					$(".icon").click();
+				}
+			});
+		});
+
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.maxHeight) {
+					panel.style.maxHeight = null;
+				} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+				}
+			});
+		}
+		window.onscroll = function () { scrollFunction() };
+		function scrollFunction() {
+			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+				document.getElementById("navbar").style.top = "0";
+				document.getElementById("scroll-up").style.display = "block";
+			} else {
+				document.getElementById("navbar").style.top = "-119px";
+				document.getElementById("scroll-up").style.display = "none";
+			}
+		}
+
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+		//SCROLL ANIMATE
+		var scroll = window.requestAnimationFrame ||
+			function (callback) { window.setTimeout(callback, 1000 / 60) };
+		var elementsToShow = document.querySelectorAll('.show-on-scroll');
+		function loop() {
+
+			Array.prototype.forEach.call(elementsToShow, function (element) {
+				if (isElementInViewport(element)) {
+					element.classList.add('is-visible');
+				} else {
+					element.classList.remove('is-visible');
+				}
+			});
+
+			scroll(loop);
+		}
+		loop();
+
+		function addActiveClass(event) {
+			// Remove 'active' class from all sections
+			var sections = document.querySelectorAll('section');
+			sections.forEach(function (section) {
+				section.classList.remove('active');
+			});
+
+			// Get the ID of the section to be made active
+			var sectionId = event.target.getAttribute('href').substring(1); // Remove the '#' from the href
+			var activeSection = document.getElementById(sectionId);
+
+			// Add 'active' class to the section
+			activeSection.classList.add('active');
+		}
+
+		// Add click event listeners to all links
+		var links = document.querySelectorAll('.scroll-link');
+		links.forEach(function (link) {
+			link.addEventListener('click', addActiveClass);
+		});
+
+		// Function to handle scroll event
+		function handleScroll() {
+			var scrollPosition = window.scrollY;
+
+			// Remove 'active' class from all sections
+			var sections = document.querySelectorAll('section');
+			sections.forEach(function (section) {
+				var sectionTop = section.offsetTop;
+				var sectionHeight = section.offsetHeight;
+
+				// Add 'active' class to the section currently in view
+				if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+					section.classList.add('active');
+				} else {
+					section.classList.remove('active');
+				}
+			});
+		}
+
+		// Add scroll event listener
+		window.addEventListener('scroll', handleScroll);
+
+		function isElementInViewport(el) {
+			// special bonus for those using jQuery
+			if (typeof jQuery === "function" && el instanceof jQuery) {
+				el = el[0];
+			}
+			var rect = el.getBoundingClientRect();
+			return (
+				(rect.top <= 0
+					&& rect.bottom >= 0)
+				||
+				(rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+					rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+				||
+				(rect.top >= 0 &&
+					rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+			);
+		}
+		var myVar;
+		function myLoader() {
+			myVar = setTimeout(showPage, 3000);
+		}
+
+		function showPage() {
+			document.getElementById("loader").style.display = "none";
+			document.getElementById("myDiv").style.display = "block";
+		}
+		//email send script
+		function sendEmail() {
+			//alert("click");
+			var name = document.getElementById("name").value;
+			var email = document.getElementById("email").value;
+			var message = document.querySelector('textarea[name="message"]').value;
+
+			// Get the button element
+			var sendButton = document.getElementById("submit");
+
+			// Change the button text to "Sending Email"
+			sendButton.textContent = "Sending Email";
+
+			// Check if any field is empty
+			if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+				// Show toast message
+				Toastify({
+					text: "Please fill in all fields before sending the email.",
+					duration: 3000,
+					close: true,
+					gravity: "top",
+					position: "center",
+					className: "toastify-warning",
+				}).showToast();
+
+				// Revert button text back to "Send"
+				sendButton.textContent = "Submitting ...";
+
+				return;
+			}
+
+			// Show loading indicator
+			var loadingToast = Toastify({
+				text: "Sending email...",
+				duration: -1, // Indefinite duration
+				close: false,
+				gravity: "top",
+				position: "center",
+			}).showToast();
+
+			// Make AJAX request
+			$.post("/Home/SendEmail", {
+				recipient: email,
+				body: message
+			}, function (data, status) {
+				// Hide loading indicator if it exists
+				if (loadingToast) {
+					loadingToast.hideToast();
+					loadingToast = null; // Remove reference to the loading toast
+				}
+
+				if (status) {
+					Toastify({
+						text: "An email has been sent to " + email + " successfully!",
+						duration: 3000,
+						close: true,
+						gravity: "top",
+						position: "center",
+					}).showToast();
+					document.getElementById("name").value = "";
+					document.getElementById("email").value = "";
+					document.querySelector('textarea[name="message"]').value = "";
+				} else {
+					Toastify({
+						text: "Email could not be sent to " + email,
+						duration: 3000,
+						close: true,
+						gravity: "top",
+						position: "center",
+					}).showToast();
+				}
+
+				// Revert button text back to "Send"
+				sendButton.textContent = "Send";
+			});
+		}
+		$(function () {
+			$(".icon-set").click(function () {
+				$(".icon-set, .txt-span").toggleClass("press", 1000);
+			});
+		});
+
+		
+
+		
+	</script>
+	</body>
