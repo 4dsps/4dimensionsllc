@@ -26,7 +26,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!--FONT AWESOME-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="~/js/site.js"></script>
 <!--GOOGLE FONTS-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fredoka+One&family=Kanit:wght@300&display=swap" rel="stylesheet">
@@ -56,20 +57,22 @@
 	<header>
         <div class="topnav" id="myTopnav">
 			
-			<a class="logo"><img class="logo-2" src="~/images/4dlogo.png" /></a>
+			<a class="logo" href="#humanManagement"><img class="logo-2" src="~/images/4dlogo.png" /></a>
 
-			<a id="lblContact" class="order4 scroll-link" href="#Support" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Support</a>
+			<a id="lblSupport" class="scroll-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Support</a>
+			<hr role="separator" class="dividerMenu" />
+			<a href="#our-team" class="scroll-link">Our Team</a>
 			<hr role="separator" class="dividerMenu" />
 
-			<a id="lblDispatch" href="#dispatching" class="dropbtn order3 scroll-link">
-				Dispatching Services
+			<a id="lblDispatch" href="#eventId" class="dropbtn order3 scroll-link">
+				Events
 			</a>
 			<hr role="separator" class="dividerMenu" />
 
-			<a id="lblFleet" class="order2 scroll-link" href="#fleetManagement">Fleet Management</a>
+			<a id="lblFleet" class="order2 scroll-link" href="#fleetManagement">Services </a>
 			<hr role="separator" class="dividerMenu" />
 
-			<a id="lblHuman" href="#humanManagement" class="active order1 scroll-link">Human Management</a>
+			<a id="lblHuman" href="#humanManagement" class="active order1 scroll-link">Home </a>
 			
 			<a href="javascript:void(0);" style="font-size:25px;" class="icon" onclick="myFunction()">&#9776;</a>
 			</div>
@@ -77,15 +80,17 @@
 	</header>
 	<div class="topnav" id="navbar">
 		@* <div class="slide-menu"> *@
-			<a class="logo"><img class="logo-width" src="~/images/4dlogo.png" /></a>
+		<a class="logo" href="#humanManagement"><img class="logo-width" src="~/images/4dlogo.png" /></a>
 		<div class="menus">
-			<a href="#Support">Support</a>
-			<a href="#dispatching" class="dropbtn">
-					Dispatching Services
+			
+			<a href="#Support" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Support</a>
+			<a href="#our-team" class="scroll-link">Our Team</a>
+			<a href="#eventId" class="dropbtn">
+				Events
 				</a>
 			
-			<a href="#fleetManagement">Fleet Management</a>
-			<a href="#humanManagement" class="active">Human Management</a>
+			<a href="#fleetManagement">Services</a>
+			<a href="#humanManagement" class="active">Home</a>
 
 		</div>
 	@* 	</div> *@
@@ -109,6 +114,11 @@
 			</tr>
 		</table>
 	</div>
+	<h1 class="title clr-black ourTeamHead"> Our Team </h1>
+	<section class="ourTeam" id="our-team"></section>
+
+	
+
 	<!--CARDS-->
 	<section class="section0" id="ServiceSection">
 		<div class="cardBannerWidth card banner">
@@ -117,10 +127,7 @@
 				4Dimensions LLC, maintains reasonable fleet of delivery vans and delivery associates. To address sudden increase of delivery packages, we always run with back up of spare van &  delivery associate, big vans are dispatched with assistant as well. We periodicaly execute maintenance schedule of van so on time delivery can be assured and better health status achievement of delivery vans.
 			</p>
 		</div>
-		@* <div class="card inline-photo show-on-scroll">
-			<i class="fa fa-handshake-o"></i>
-			<h3>Consulting Services</h3>
-		</div> *@
+		
 		<div class="card inline-photo show-on-scroll">
 			<div class="row">
 				<div class="col-md-2 mdTop-mblView"><i class="fa fa-users"></i></div>
@@ -196,8 +203,8 @@
 
 	<section class="slick" id="moreaboutus">
 		<div class="banner mt-4">
-			<h1 class="title"> Benefits We Offer </h1>
-			<h5 class="sub-title">Bringing New Business solutions and ideas</h5>
+			<h1 class="title clr-black"> Benefits We Offer </h1>
+			<h5 class="sub-title clr-black">Bringing New Business solutions and ideas</h5>
 		</div>
 		<table>
 			<tr>
@@ -370,19 +377,73 @@
 		</div>
 
 	</section> *@
+	<section id="eventId" class="event-section">
+		<h1 class="title clr-black ourTeamHead"> Events</h1>
+		<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+			<div class="carousel-indicators" id="carousel-indicators"></div>
+			<div class="carousel-inner" id="carousel-inner"></div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</section>
+	<hr class="hr-color" />
+	<section id="Faqs">
+		<div class="accordion">
+			<h1 class="faqsSetHead">Frequently Asked Questions</h1>
+			<div class="accordion-item">
+				<input type="checkbox" id="accordion1">
+				<label for="accordion1" class="accordion-item-title">
+					<span class="icon"></span>Where is 4Dimensions LLC located?
+
+				</label>
+				<div class="accordion-item-desc">SEO, or Search Engine Optimization, is the practice of optimizing a website to improve its visibility on search engines like Google. It involves various techniques to enhance a site's ranking in search results. SEO is crucial for online businesses as it helps drive organic traffic, increases visibility, and ultimately leads to higher conversions.</div>
+			</div>
+
+			<div class="accordion-item">
+				<input type="checkbox" id="accordion2">
+				<label for="accordion2" class="accordion-item-title"><span class="icon"></span>How long does it take to see results from SEO efforts?</label>
+				<div class="accordion-item-desc">The timeline for seeing results from SEO can vary based on several factors, such as the competitiveness of keywords, the current state of the website, and the effectiveness of the SEO strategy. Generally, it may take several weeks to months before noticeable improvements occur. However, long-term commitment to SEO is essential for sustained success.</div>
+			</div>
+
+			<div class="accordion-item">
+				<input type="checkbox" id="accordion3">
+				<label for="accordion3" class="accordion-item-title"><span class="icon"></span>What are the key components of a successful SEO strategy?</label>
+				<div class="accordion-item-desc">A successful SEO strategy involves various components, including keyword research, on-page optimization, quality content creation, link building, technical SEO, and user experience optimization. These elements work together to improve a website's relevance and authority in the eyes of search engines.</div>
+			</div>
+
+			<div class="accordion-item">
+				<input type="checkbox" id="accordion4">
+				<label for="accordion4" class="accordion-item-title"><span class="icon"></span>How does mobile optimization impact SEO?</label>
+				<div class="accordion-item-desc">Mobile optimization is crucial for SEO because search engines prioritize mobile-friendly websites. With the increasing use of smartphones, search engines like Google consider mobile responsiveness as a ranking factor. Websites that provide a seamless experience on mobile devices are more likely to rank higher in search results.</div>
+			</div>
+
+			<div class="accordion-item">
+				<input type="checkbox" id="accordion5">
+				<label for="accordion5" class="accordion-item-title"><span class="icon"></span>What is the role of backlinks in SEO, and how can they be acquired?</label>
+				<div class="accordion-item-desc">Backlinks, or inbound links from other websites to yours, play a significant role in SEO. They are considered a vote of confidence and can improve a site's authority. Quality over quantity is crucial when acquiring backlinks. Strategies for obtaining backlinks include creating high-quality content, guest posting, reaching out to industry influencers, and participating in community activities. It's important to focus on natural and ethical link-building practices.</div>
+			</div>
+
+		</div>
+	</section>
 	<hr class="hr-color" />
 	<!--FOOTER-->
 	<footer>
 		<div class="footer">
 			<section>
-				<p class="title">4DIMENSIONS LLC</p>
-				<p style="font-size:.8rem !important">
+				<p class="title p-margin ">4DIMENSIONS LLC</p>
+				<p class="p-margin " style="font-size:.8rem !important">
 					402 Rolling Green Ave
 				</p>
-				<p style="font-size:.8rem !important">
+				<p class="p-margin " style="font-size:.8rem !important">
 					 New Castle DE 19720
 				</p>
-				<p style="font-size:.8rem !important">
+				<p class="p-margin " style="font-size:.8rem !important">
 					UAN: +1 855 789 4DIM
 				</p>
 			</section>
@@ -390,17 +451,17 @@
 			<section class="sectionstyle">
 				<p class="title">QUICK LINKS</p>
 				<p><a href="#humanManagement">Human Management</a></p>
-				<p><a href="#fleetManagement">Fleet Management</a></p>
+				<p><a href="#fleetManagement">Fleet Management</a></p> 
 				<p><a href="#dispatching">Dispatching Service</a></p>
 			</section>
 
 			<section class="sectionstyle">
 				<p class="title">SUPPORT</p>
-				<p><a href="#ServiceSection">Our Featured Services</a></p>
-				<p><a href="#moreaboutus">Benefits</a></p>
-                @* <p><a target="_blank" title="Check Your Emails" href="https://4dimensionsllc.awsapps.com/auth/?client_id=6b9615ec01be1c8d&redirect_uri=https%3A%2F%2Fwebmail.mail.us-east-1.awsapps.com%2Fworkmail%2F">Emails</a></p>
-				*@				
-				<p><a target="_blank" title="Check Your Emails" href="https://4dimensionsllc.awsapps.com/auth/?client_id=6b9615ec01be1c8d&redirect_uri=https%3A%2F%2Fwebmail.mail.us-east-1.awsapps.com%2Fworkmail%2F">Emails</a></p>
+				<p><a href="#ServiceSection"></a></p>
+				<p><a >Privacy Policy</a></p>
+				<p><a target="_blank" href="@Url.Action("Privacy", "Home" )">Company Policy</a></p>
+				<p><a href="#Faqs">FAQS</a></p>
+
 			</section>
 		</div>
 
@@ -408,7 +469,95 @@
 			Copyright © 2024 4Dimension LLC, All Rights Reserved
 		</div>
 
-		<div class="sub-footer">
+	</footer>
+
+
+
+	</div>
+
+	<!-- Button trigger modal -->
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content mdl-height">
+				<div class="modal-header justify-content-center text-center">
+					<h2 class="modal-title lg-view" id="staticBackdropLabel">Contact</h2>
+					<button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close" style="opacity: 1;"></button>
+
+					@* <button type="button" class="close btn-closed" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button> *@
+				</div>
+
+				<div class="modal-body">
+					<div class="container">
+						<div class="form-container">
+							
+							<div class="right-container">
+								<div class="right-inner-container">
+									<form action="#">
+
+										<input type="text" id="first-name" placeholder="First Name" />
+										<input type="text" id="last-name" placeholder="Last Name" />
+										<input type="text" id="father-name" placeholder="Father Name" />
+										<input type="date" id="dob" placeholder="Date Of Birth" />
+										<input type="number" id="contact" placeholder="Contact" />
+										<input type="email" pattern="^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address"id="email"  placeholder="Email" />
+										<textarea id="message" rows="4" placeholder="Message"></textarea>
+
+										<div class="like-container">
+											<button type="button" class="btn green" id=""><i id="" class="fa fa-thumbs-up fa-lg default-clr toggle-color-btn"></i></button>
+
+
+											<div class="heart-react">
+												<i class="icon-set mg-icn"></i>
+												<span class="txt-span">liked!</span>
+											</div>
+										</div>
+										
+										<div class="button-container">
+											<button type="reset" class="btn-reset">Reset</button>
+											<button type="button" class="btn-submit">Submit</button>
+										
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<!--JAVASCRIPT-->
+
+
+
+	@* <div class="fixed">
+		<a href="humanManagement" class="button " id="scroll-up">
+			<div class="buttonDiv bg-b-blue">
+				Home
+			</div>
+		</a>
+		
+	</div> *@
+	<div class="fixed-React">
+		
+		
+
+				<div class="like-container-Home">
+			<button type="button" class="btn green" id="">
+				<i id="" class="fa fa-thumbs-up fa-lg default-clr toggle-color-btn"></i>
+						</button>
+
+
+					<div class="heart-react-Home">
+						<i class="icon-set"></i>
+						<span class="txt-span">liked!</span>
+					</div>
 			<ul class="social-media-list mt-6">
 				<li>
 					<a href="https://www.facebook.com/profile.php?id=61558886634641" target="_blank" class="contact-icon">
@@ -442,88 +591,34 @@
 					</a>
 				</li>
 			</ul>
-		</div>
-	</footer>
-
-
-
-	</div>
-
-	<!-- Button trigger modal -->
-
-
-	<!-- Modal -->
-	<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content mdl-height">
-				<div class="modal-header justify-content-center text-center">
-					<h2 class="modal-title lg-view" id="staticBackdropLabel">Contact</h2>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
-
-				<div class="modal-body">
-					<div class="container">
-						<div class="form-container">
-							
-							<div class="right-container">
-								<div class="right-inner-container">
-									<form action="#">
-
-										<input type="text" id="first-name" placeholder="First Name" />
-										<input type="text" id="last-name" placeholder="Last Name" />
-										<input type="text" id="father-name" placeholder="Father Name" />
-										<input type="date" id="dob" placeholder="Date Of Birth" />
-										<input type="number" id="contact" placeholder="Contact" />
-										<input type="email" id="email" placeholder="Email" />
-										<textarea id="message" rows="4" placeholder="Message"></textarea>
-
-										<div class="like-container">
-											<button type="button" class="btn" id="green"><i id="toggle-color-btn" class="fa fa-thumbs-up fa-lg default-clr"></i></button>
-
-
-											<div class="heart-react">
-												<i class="icon-set"></i>
-												<span class="txt-span">liked!</span>
-											</div>
-										</div>
-										
-										<div class="button-container">
-											<button type="reset" class="btn-reset">Reset</button>
-											<button type="submit" class="btn-submit">Submit</button>
-										
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-	<!--JAVASCRIPT-->
-
-
-
-	<div class="fixed">
-		<a href="" class="button " id="scroll-up">
-			<div class="buttonDiv bg-b-blue">
-				Home
-			</div>
-		</a>
+		
+		
 		
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+	<script src="~/js/site.js"></script>
 	<script>
-		document.getElementById('green').addEventListener('click', function () {
-			const icon = document.getElementById('toggle-color-btn');
-			if (icon.style.color === 'green') {
-				icon.style.color = ''; // Reset to default color
-			} else {
-				icon.style.color = 'green'; // Set to green
-			}
-		});
+		// Select elements by class name 'green'
+		var greenElements = document.getElementsByClassName('green');
+
+		// Select elements by class name 'toggle-color-btn'
+		var toggleColorButtons = document.getElementsByClassName('toggle-color-btn');
+
+		// Loop through the 'green' elements and add event listener to each element
+		for (var i = 0; i < greenElements.length; i++) {
+			greenElements[i].addEventListener('click', function () {
+				for (var j = 0; j < toggleColorButtons.length; j++) {
+					if (toggleColorButtons[j].style.color === 'green') {
+						toggleColorButtons[j].style.color = ''; // Reset to default color
+					} else {
+						toggleColorButtons[j].style.color = 'green'; // Set to green
+					}
+				}
+			});
+		}
+
+
 		$(document).ready(function () {
 		
 			$("#lblContact").click(function () {
@@ -753,8 +848,85 @@
 			});
 		});
 
-		
+		document.addEventListener('DOMContentLoaded', function () {
+			const blockquotes = document.querySelectorAll('figure.snip1390 blockquote');
+
+			blockquotes.forEach(blockquote => {
+				const text = blockquote.innerHTML;
+				blockquote.innerHTML = `${text}<span class="close-quote">”</span>`;
+			});
+		});
 
 		
+		const container = document.getElementById('our-team');
+
+		data.team.forEach((profile, index) => {
+			const figure = document.createElement('figure');
+			figure.className = 'snip1390';
+
+			figure.innerHTML = `
+				  <img src="${profile.img}" alt="${profile.name}" class="profile" />
+				  <figcaption>
+					<h2>${profile.name}</h2>
+					<h4>${profile.role}</h4>
+					<blockquote>${profile.quote}</blockquote>
+				  </figcaption>
+				`;
+
+			container.appendChild(figure);
+
+			// Add a break element after every three profiles
+			if ((index + 1) % 3 === 0) {
+				const breakElement = document.createElement('div');
+				breakElement.className = 'break';
+				container.appendChild(breakElement);
+			}
+		});
+
+
+		//crousel
+		// Select DOM elements
+		const indicatorsContainer = document.getElementById('carousel-indicators');
+		const innerContainer = document.getElementById('carousel-inner');
+
+		// Generate carousel indicators and items
+		data.events.forEach((event, index) => {
+			// Create indicator
+			const indicator = document.createElement('button');
+			indicator.type = 'button';
+			indicator.setAttribute('data-bs-target', '#carouselExampleDark');
+			indicator.setAttribute('data-bs-slide-to', index);
+			if (index === 0) indicator.classList.add('active');
+			indicator.setAttribute('aria-current', index === 0 ? 'true' : 'false');
+			indicator.setAttribute('aria-label', `Slide ${index + 1}`);
+			indicatorsContainer.appendChild(indicator);
+
+			// Create carousel item
+			const item = document.createElement('div');
+			item.classList.add('carousel-item');
+			if (index === 0) item.classList.add('active');
+
+			const img = document.createElement('img');
+			img.src = event.pics[0]; // Use the first image in the pics array
+			img.classList.add('d-block', 'w-100');
+			img.alt = event.name;
+
+			const caption = document.createElement('div');
+			caption.classList.add('carousel-caption', 'd-none', 'd-md-block');
+
+			const title = document.createElement('h5');
+			title.textContent = event.name;
+
+			const description = document.createElement('p');
+			description.textContent = event.remarks;
+
+			caption.appendChild(title);
+			caption.appendChild(description);
+
+			item.appendChild(img);
+			item.appendChild(caption);
+
+			innerContainer.appendChild(item);
+		});
 	</script>
 	</body>
