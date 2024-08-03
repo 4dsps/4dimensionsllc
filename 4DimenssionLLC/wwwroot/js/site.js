@@ -25,27 +25,27 @@ const data = {
             "quote": "The strength to change what I can, the inability to accept what I can't and the incapacity to tell the difference.",
             "img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample6.jpg"
         },
-        //{
-        //    "id": 4,
-        //    "name": "Eleanor Crisp",
-        //    "role": "Admin",
-        //    "quote": "Dad buried in landslide! Jubilant throngs fill streets! Stunned father inconsolable - demands recount!",
-        //    "img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample3.jpg"
-        //},
-        //{
-        //    "id": 5,
-        //    "name": "Arshad Ali",
-        //    "role": "Operation Manager",
-        //    "quote": "Wormwood : Calvin, how about you? Calvin : Hard to say ma'am. I think my cerebellum has just fused.",
-        //    "img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample5.jpg"
-        //},
-        //{
-        //    "id": 6,
-        //    "name": "Ahsan Raza",
-        //    "role": "Public Relations",
-        //    "quote": "The strength to change what I can, the inability to accept what I can't and the incapacity to tell the difference.",
-        //    "img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample6.jpg"
-        //}
+        {
+            "id": 4,
+            "name": "Eleanor Crisp",
+            "role": "Admin",
+            "quote": "Dad buried in landslide! Jubilant throngs fill streets! Stunned father inconsolable - demands recount!",
+            "img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample3.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Arshad Ali",
+            "role": "Operation Manager",
+            "quote": "Wormwood : Calvin, how about you? Calvin : Hard to say ma'am. I think my cerebellum has just fused.",
+            "img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample5.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Ayesha Afzal",
+            "role": "Public Relations",
+            "quote": "The strength to change what I can, the inability to accept what I can't and the incapacity to tell the difference.",
+            "img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample6.jpg"
+        }
     ],
 	"events": [
 		{

@@ -108,9 +108,14 @@
 						<a href="#sections" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn1">Explore More</a>
 					</section>
 				</td>
-				<td>
-					<img src="https://i.ibb.co/6R10B7H/main-01.png" class="inline-photo show-on-scroll" alt="INFERNO">
-				</td>
+				<td class="bg-img">
+					<div></div>
+@* 					<img src="~/images/4dlogo.png" class="inline-photo show-on-scroll" alt="INFERNO">
+ *@				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><span class="copnyNameStyle"> 4Dimensions LLC</span><img class="logo-width mbl-view" src="~/images/4dlogo.png" /></td>
 			</tr>
 		</table>
 	</div>
@@ -501,10 +506,12 @@
 
 										<input type="text" id="first-name" placeholder="First Name" />
 										<input type="text" id="last-name" placeholder="Last Name" />
-										<input type="text" id="father-name" placeholder="Father Name" />
+										
 										<input type="date" id="dob" placeholder="Date Of Birth" />
-										<input type="number" id="contact" placeholder="Contact" />
+										<input type="number" id="contact" placeholder="Contact 1" />
+										<input type="number" id="contact2" placeholder="Contact 2" />
 										<input type="email" pattern="^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address"id="email"  placeholder="Email" />
+										<input type="text" id="Address" placeholder="Address" />
 										<textarea id="message" rows="4" placeholder="Message"></textarea>
 
 										<div class="like-container">
@@ -757,6 +764,7 @@
 					rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
 			);
 		}
+
 		var myVar;
 		function myLoader() {
 			myVar = setTimeout(showPage, 3000);
@@ -860,28 +868,42 @@
 		
 		const container = document.getElementById('our-team');
 
-		data.team.forEach((profile, index) => {
-			const figure = document.createElement('figure');
-			figure.className = 'snip1390';
+		// Assuming 'container' is the parent element where the profiles will be appended
 
-			figure.innerHTML = `
-				  <img src="${profile.img}" alt="${profile.name}" class="profile" />
-				  <figcaption>
-					<h2>${profile.name}</h2>
-					<h4>${profile.role}</h4>
-					<blockquote>${profile.quote}</blockquote>
-				  </figcaption>
+		if (!container) {
+			console.error('Container element not found');
+		}
+
+		// Check if data.team is available and not empty
+		if (data.team && data.team.length > 0) {
+			let row; // Declare row outside the loop
+
+			data.team.forEach((profile, index) => {
+				// Create a new row wrapper for every 3 profiles
+				if (index % 3 === 0) {
+					row = document.createElement('div');
+					row.className = 'profile-row';
+					container.appendChild(row);
+				}
+
+				const figure = document.createElement('figure');
+				figure.className = 'snip1390';
+
+				figure.innerHTML = `
+					<img src="${profile.img}" alt="${profile.name}" class="profile" />
+					<figcaption>
+						<h2>${profile.name}</h2>
+						<h4>${profile.role}</h4>
+						<blockquote>${profile.quote}</blockquote>
+					</figcaption>
 				`;
 
-			container.appendChild(figure);
-
-			// Add a break element after every three profiles
-			if ((index + 1) % 3 === 0) {
-				const breakElement = document.createElement('div');
-				breakElement.className = 'break';
-				container.appendChild(breakElement);
-			}
-		});
+				// Append the profile card to the current row
+				row.appendChild(figure);
+			});
+		} else {
+			console.error('No profiles to display');
+		}
 
 
 		//crousel

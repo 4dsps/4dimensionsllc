@@ -436,34 +436,75 @@ header {
 
 
 
-
-
-
-
-
-
-
-.main {
-    width: 100%;
-    height: 100vh;
-    background-color: #13345b;
-    /*    background-image: url('../images/main-bg.jpg');
-*/ background-size: 100% 100%;
+.row {
+    display: flex;
+   /* gap: 20px;*/
 }
 
-    .main table {
-        width: 100%;
-        height: 100vh;
+.col-md-6{
+    width:48%!important;
+}
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .profile-row {
+        flex-direction: column;
+        align-items: center;
     }
+    figure.snip1390{
+        min-width:350px!important;
+    }
+    .profile-row .snip1390 {
+        width: 100%; /* Ensure profiles take full width of the row */
+        max-width: 600px; /* Optional: Set a max width for larger screens */
+        margin: 10px 0; /* Adjust margin for spacing */
+    }
+    .bg-img {
+        background-image: url('../images/4dlogo.png');
+        background-size: 100% 100%;
+        height: 19em!important;
+    }
+    .mbl-view {
+        width: 22% !important;
+        height: 38% !important;
+    }
+}
+.copnyNameStyle{
+    font-size:3em;
+    font-weight:700;
+}
+.main {
+    width: 100%;
+    height: 110vh;
+    background-color: #13345b85;
+    /*  padding-top: 7em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background-image: url('../images/4dlogo.png');*/
+    background-size: 100% 100%;
+}
+.bg-img {
+    background-image: url('../images/4dlogo.png');
+    background-size: 100% 100%;
+    height:40em;
+}
+/*.mgTopSection{
+    margin-top:-9em!important;
+}*/
+.main table {
+    width: 100%;
+    height: 100vh;
+}
 
         .main table td {
             width: 50%;
         }
 
             .main table td img {
-                width: 80%;
+                /*  width: 80%;
                 float: right;
-                height: 80%;
+                height: 80%;*/
+                width: 10%;
+                float: right;
+                height: 45%;
                 margin-top: 10%;
                 pointer-events: none;
                 --delay: 0s;
@@ -659,7 +700,16 @@ header {
                 margin-left: auto;
                 margin-right: auto;
             }
+.profile-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Adjust as needed */
+}
 
+.snip1390 {
+    width: 30%!important; /* Ensure three items fit in the row */
+    box-sizing: border-box;
+}
     .slick .card {
         position: relative;
         width: 95%;
@@ -2317,6 +2367,7 @@ form p {
     align-items: center; /* Center items horizontally */
     justify-content: center; /* Center items vertically */
     gap: 1em; /* Space between elements */
+    padding-bottom: 18px;
 }
 
 .heart-react-Home {
@@ -2452,7 +2503,6 @@ figure.snip1390 blockquote {
     }
 
 .ourTeam {
-    display: flex;
     justify-content: space-around;
 }
 
