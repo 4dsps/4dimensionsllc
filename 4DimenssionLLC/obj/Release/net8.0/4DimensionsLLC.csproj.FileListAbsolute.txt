@@ -58,3 +58,4 @@ D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\refint\4Dime
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\4DimensionsLLC.pdb
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\4DimensionsLLC.genruntimeconfig.cache
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\ref\4DimensionsLLC.dll
+D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\4DimensionsLLC.sourcelink.json
