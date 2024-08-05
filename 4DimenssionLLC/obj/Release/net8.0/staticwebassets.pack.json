@@ -41,6 +41,26 @@
       "PackagePath": "staticwebassets\\images\\R.jpg"
     },
     {
+      "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\event1.jpg",
+      "PackagePath": "staticwebassets\\images\\event1.jpg"
+    },
+    {
+      "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\event2.jpg",
+      "PackagePath": "staticwebassets\\images\\event2.jpg"
+    },
+    {
+      "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\event3.jpg",
+      "PackagePath": "staticwebassets\\images\\event3.jpg"
+    },
+    {
+      "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\event4.jfif",
+      "PackagePath": "staticwebassets\\images\\event4.jfif"
+    },
+    {
+      "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\event5.jpg",
+      "PackagePath": "staticwebassets\\images\\event5.jpg"
+    },
+    {
       "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\logo-ico.ico",
       "PackagePath": "staticwebassets\\images\\logo-ico.ico"
     },
@@ -287,6 +307,10 @@
     {
       "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\logo-ico.ico",
       "PackagePath": "staticwebassets\\logo-ico.ico"
+    },
+    {
+      "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\pdf\\PrivacyPolicy.pdf",
+      "PackagePath": "staticwebassets\\pdf\\PrivacyPolicy.pdf"
     },
     {
       "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.4DimensionsLLC.Microsoft.AspNetCore.StaticWebAssets.props",
