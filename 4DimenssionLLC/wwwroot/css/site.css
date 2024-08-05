@@ -444,7 +444,7 @@ header {
 .col-md-6{
     width:48%!important;
 }
-@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+@media (max-width: 767px) { /* Adjust the breakpoint as needed */
     .profile-row {
         flex-direction: column;
         align-items: center;
@@ -463,8 +463,11 @@ header {
         height: 19em!important;
     }
     .mbl-view {
-        width: 22% !important;
+        width: 15% !important;
         height: 38% !important;
+    }
+    .copnyNameStyle{
+        font-size:2.3em!important;
     }
 }
 .copnyNameStyle{
@@ -1899,11 +1902,14 @@ hr {
         .topnav a {
             font-size: 13px !important;
         }
-
+    .mbl-view {
+        width: 15% !important;
+        height: 10% !important;
+    }
         .container table td {
             margin: 1em !important;
             width: 50%;
-            display: contents;
+          /*  display: contents;*/
             padding: 1em;
             text-align: center;
             margin-right: 1em !important;
@@ -2127,9 +2133,9 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-.mg-icn {
+/*.mg-icn {
     margin: 0 0 13px!important;
-}
+}*/
 .left-container {
     display: flex;
     flex: 1;
@@ -2238,12 +2244,7 @@ form p {
 }
 
 .icon-set {
-    cursor: pointer;
-    padding: 10px 12px 8px;
-    background: #04aee0;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 0 0px;
+   font-size:19px!important;
     color: #eee;
     transition: .2s;
 }
@@ -2317,7 +2318,40 @@ form p {
 }
 .like-container {
     display: flex;
+    /*justify-content: space-between;*/ /* Space between icon-label groups */
     align-items: center;
+    gap:22em;
+}
+.input-error {
+    border: 4px solid red;
+}
+
+/* Green border for valid input */
+.input-success {
+    border: 4px solid #09e109;
+}
+.icon-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Space between icon and label */
+}
+
+.like-label, .heart-label {
+    font-size: 16px; /* Adjust as needed */
+    color: white; /* Adjust as needed */
+    width:6em;
+}
+
+
+.icon-label-content {
+    display: flex;
+    align-items: center;
+    width:12em;
+}
+
+.icon-label .icon-label-content i {
+    margin-right: 8px; /* Adjust spacing as needed */
 }
 
 .btn {
@@ -2333,11 +2367,11 @@ form p {
 .heart-react {
     display: flex;
     align-items: center;
-    margin-left: 10px;
+ /*   margin-left: 10px;*/
 }
 
 .icon-set {
-    font-size: 17px;
+ 
     margin-right: 5px;
 }
 
@@ -2641,4 +2675,74 @@ figure.snip1390 blockquote {
         .accordion h1 {
             font-size: 22px;
         }
+}
+.BreadCrumbDiv {
+    background-color: #0d3054 !important;
+    border-radius: 10px !important;
+    margin: 10px 0px 10px 0px;
+    border-bottom: 0px solid #e7eaec !important;
+    padding: 15px 0px 4px 10px !important;
+  
+}
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space between items */
+    padding: 15px; /* Adjust padding as needed */
+    border-bottom: 1px solid #ffffff52;
+}
+
+.LogoAnch {
+    margin-right: auto; /* Pushes the logo to the left */
+}
+
+
+
+.modal-title {
+    flex: 1; /* Allows title to take up remaining space and be centered */
+    text-align: center;
+    margin: 0;
+}
+
+
+
+.headingFAq{
+    text-align:center;
+}
+.scrolbardiv {
+    background: #124479 !important;
+}
+.txt-cnter{
+    text-align:center;
+}
+.TROUSParagraph {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 28px;
+    margin: 0 0 10px;
+    color: #ffffff;
+}
+.TROUSStrong {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align:center;
+}
+.ModelTitle {
+    font-size: 2rem !important;
+    padding-left: 1.6rem !important;
+    padding-top: 1rem !important;
+    font-weight: 600;
+    text-align:center;
+}
+.PolicyAllign {
+    text-align: justify;
+    margin: 0px 20px 20px 20px;
+}
+.PrintBtnSet {
+    cursor: pointer;
+    float: right;
+    padding-top: 10px;
+    font-size: 1.5em;
+    padding-right: 2em;
 }
