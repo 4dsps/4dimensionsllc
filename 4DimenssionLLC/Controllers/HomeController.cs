@@ -51,7 +51,11 @@ namespace _4DimenssionLLC.Controllers
 				return StatusCode(500, $"Failed to send email: {ex.Message}");
 			}
 		}
-		public IActionResult Privacy()
+		public IActionResult PrivacyPolicy()
+        {
+            return View();
+        }
+		public IActionResult CompanyPolicy()
         {
             return View();
         }

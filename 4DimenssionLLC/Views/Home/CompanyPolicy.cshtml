@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Company Policy";
+}
+<head>
+
+<!--EXTERNAL CSS-->
+<link href="~/css/site.css" rel="stylesheet" />
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+</head>
+<div class="wrapper BreadCrumbDiv page-heading">
+    <div class="row">
+        <div class="col-md-4">
+            <a href="/" class="LogoAnch"><img class="logo-width" src="~/images/4dlogo.png" /></a>
+
+        </div>
+        <div class="col-md-4">
+            <h2 class="headingFAq">Company Policy</h2>
+
+        </div>
+        <div class="col-md-4">
+            <span class="PrintBtnSet" type="button" id="btnPrivacyStatementPrint">
+                <i class="fa fa-print"></i>
+            </span>
+        </div>
+    </div>
+
+</div>
+<iframe src="~/pdf/privacypolicy.pdf" class="pdf-style">
+
+    <p>Your browser does not support iframes.</p>
+</iframe>

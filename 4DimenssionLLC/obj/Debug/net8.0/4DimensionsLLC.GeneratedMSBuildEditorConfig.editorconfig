@@ -18,12 +18,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Blazor Projects\4dimensionsllcweb\4DimenssionLLC
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Blazor Projects/4dimensionsllcweb/4DimenssionLLC/Views/Home/CompanyPolicy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wYW55UG9saWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Blazor Projects/4dimensionsllcweb/4DimenssionLLC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Blazor Projects/4dimensionsllcweb/4DimenssionLLC/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Blazor Projects/4dimensionsllcweb/4DimenssionLLC/Views/Home/PrivacyPolicy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5UG9saWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Blazor Projects/4dimensionsllcweb/4DimenssionLLC/Views/Shared/Error.cshtml]

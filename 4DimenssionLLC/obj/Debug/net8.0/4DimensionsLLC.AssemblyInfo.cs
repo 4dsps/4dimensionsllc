@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("4DimensionsLLC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ea455098310affe50b898d05b4ef95e7cfb287d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24abe4fd952bdfff7d24fcf869dfb3e05591cb51")]
 [assembly: System.Reflection.AssemblyProductAttribute("4DimensionsLLC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("4DimensionsLLC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

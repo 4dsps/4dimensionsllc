@@ -19,24 +19,36 @@
 <meta property="og:url" content="" />
 <meta property="og:site_name" content="LEVIOOSA" />
 <head>
+	<!-- External CSS -->
+	<link href="~/css/site.css" rel="stylesheet" />
 
-<!--EXTERNAL CSS-->
-<link href="~/css/site.css" rel="stylesheet" />
-<!--PLUGIN-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<!--FONT AWESOME-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="~/js/site.js"></script>
-<!--GOOGLE FONTS-->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fredoka+One&family=Kanit:wght@300&display=swap" rel="stylesheet">
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
-	<!-- Include Toastify library -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fredoka+One&family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap CSS and JS -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<!-- jQuery Validation Plugin -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+	<!-- Toastr -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+
+	<!-- Your custom script -->
+	<script src="~/js/site.js"></script>
 </head>
+
+
 <body onload="myLoader()">
 	<div class="loading" id="loader">
 	<div class="load">
@@ -108,9 +120,14 @@
 						<a href="#sections" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn1">Explore More</a>
 					</section>
 				</td>
-				<td>
-					<img src="https://i.ibb.co/6R10B7H/main-01.png" class="inline-photo show-on-scroll" alt="INFERNO">
-				</td>
+				<td class="bg-img">
+					<div></div>
+@* 					<img src="~/images/4dlogo.png" class="inline-photo show-on-scroll" alt="INFERNO">
+ *@				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><span class="copnyNameStyle"> 4Dimensions LLC</span><img class="logo-width mbl-view" src="~/images/4dlogo.png" /></td>
 			</tr>
 		</table>
 	</div>
@@ -458,8 +475,8 @@
 			<section class="sectionstyle">
 				<p class="title">SUPPORT</p>
 				<p><a href="#ServiceSection"></a></p>
-				<p><a >Privacy Policy</a></p>
-				<p><a target="_blank" href="@Url.Action("Privacy", "Home" )">Company Policy</a></p>
+				<p><a target="_blank" href="@Url.Action("PrivacyPolicy", "Home" )">Privacy Policy</a></p>
+				<p><a target="_blank" href="@Url.Action("CompanyPolicy", "Home" )">Company Policy</a></p>
 				<p><a href="#Faqs">FAQS</a></p>
 
 			</section>
@@ -483,12 +500,11 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content mdl-height">
 				<div class="modal-header justify-content-center text-center">
+					<a href="#" class="LogoAnch"><img class="logo-width" src="~/images/4dlogo.png" /></a>
+
 					<h2 class="modal-title lg-view" id="staticBackdropLabel">Contact</h2>
 					<button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close" style="opacity: 1;"></button>
 
-					@* <button type="button" class="close btn-closed" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button> *@
 				</div>
 
 				<div class="modal-body">
@@ -497,32 +513,46 @@
 							
 							<div class="right-container">
 								<div class="right-inner-container">
-									<form action="#">
+									<form id="contact-form" enctype="multipart/form-data" method="post">
+        <input type="text" id="first-name" placeholder="First Name" required/>
+        <input type="text" id="last-name" placeholder="Last Name" required/>
+        <input type="date" id="dob" placeholder="Date Of Birth" required/>
+        <input type="number" id="contact" placeholder="Contact 1" required/>
+        <input type="number" id="contact2" placeholder="Contact 2" />
+        <input type="email" pattern="^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required title="Please enter a valid email address" id="email" placeholder="Email" />
+        <textarea id="Address" rows="2" placeholder="Address"></textarea>
+        <textarea id="message" rows="4" placeholder="Message"></textarea>
 
-										<input type="text" id="first-name" placeholder="First Name" />
-										<input type="text" id="last-name" placeholder="Last Name" />
-										<input type="text" id="father-name" placeholder="Father Name" />
-										<input type="date" id="dob" placeholder="Date Of Birth" />
-										<input type="number" id="contact" placeholder="Contact" />
-										<input type="email" pattern="^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address"id="email"  placeholder="Email" />
-										<textarea id="message" rows="4" placeholder="Message"></textarea>
+										<div class="like-container mt-2">
+											<div class="icon-label mt-2">
+												<button type="button" class="btn green">
+													<div class="icon-label-content">
+														<i class="fa fa-thumbs-up fa-lg default-clr toggle-color-btn"value="1"></i>
+														<span class="like-label">Like It</span> <!-- Label for Like -->
+													</div>
+												</button>
+											</div>
 
-										<div class="like-container">
-											<button type="button" class="btn green" id=""><i id="" class="fa fa-thumbs-up fa-lg default-clr toggle-color-btn"></i></button>
-
-
-											<div class="heart-react">
-												<i class="icon-set mg-icn"></i>
-												<span class="txt-span">liked!</span>
+											<div class="icon-label mt-2">
+												<button type="button" class="btn heart-react">
+													<div class="icon-label-content">
+														<i class="fa fa-heart icon-set mg-icn" value="2"></i>
+														<span class="heart-label">Love It</span> <!-- Label for Heart -->
+													</div>
+												</button>
 											</div>
 										</div>
-										
-										<div class="button-container">
-											<button type="reset" class="btn-reset">Reset</button>
-											<button type="button" class="btn-submit">Submit</button>
-										
-										</div>
-									</form>
+
+
+
+
+
+        <div class="button-container mt-3">
+            <button type="reset" class="btn-reset">Reset</button>
+            <button type="button"id="contactSubmit" class="btn-submit">Submit</button>
+        </div>
+    </form>
+
 								</div>
 							</div>
 						</div>
@@ -549,7 +579,20 @@
 		
 
 				<div class="like-container-Home">
-			<button type="button" class="btn green" id="">
+			<div class="icon-label ">
+				<button type="button" class="btn green">
+					<i class="fa fa-thumbs-up fa-lg default-clr toggle-color-btn"></i>
+				</button>
+			
+			</div>
+
+			<div class="icon-label mt-3">
+				<button type="button" class="btn heart-react">
+					<i class="fa fa-heart icon-set mg-icn"></i>
+				</button>
+			
+			</div>
+		@* 	<button type="button" class="btn green" id="">
 				<i id="" class="fa fa-thumbs-up fa-lg default-clr toggle-color-btn"></i>
 						</button>
 
@@ -557,7 +600,7 @@
 					<div class="heart-react-Home">
 						<i class="icon-set"></i>
 						<span class="txt-span">liked!</span>
-					</div>
+					</div> *@
 			<ul class="social-media-list mt-6">
 				<li>
 					<a href="https://www.facebook.com/profile.php?id=61558886634641" target="_blank" class="contact-icon">
@@ -596,31 +639,127 @@
 		
 		
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-	<script src="~/js/site.js"></script>
+	
 	<script>
-		// Select elements by class name 'green'
-		var greenElements = document.getElementsByClassName('green');
 
-		// Select elements by class name 'toggle-color-btn'
-		var toggleColorButtons = document.getElementsByClassName('toggle-color-btn');
+		document.addEventListener('DOMContentLoaded', function () {
+			// Handle button clicks to ensure only one is selected at a time
+			$(".icon-label button").on("click", function () {
+				// Remove 'selected' class and reset color from all buttons
+				$(".icon-label button .icon-set, .icon-label button .toggle-color-btn").css("color", ""); // Reset color
+				$(".icon-label button").removeClass("selected");
 
-		// Loop through the 'green' elements and add event listener to each element
-		for (var i = 0; i < greenElements.length; i++) {
-			greenElements[i].addEventListener('click', function () {
-				for (var j = 0; j < toggleColorButtons.length; j++) {
-					if (toggleColorButtons[j].style.color === 'green') {
-						toggleColorButtons[j].style.color = ''; // Reset to default color
-					} else {
-						toggleColorButtons[j].style.color = 'green'; // Set to green
-					}
+				// Add 'selected' class to the clicked button
+				$(this).addClass("selected");
+
+				// Apply color based on which button was clicked
+				if ($(this).find('.icon-set').length) {
+					$(this).find('.icon-set').css("color", "red");
+				} else if ($(this).find('.toggle-color-btn').length) {
+					$(this).find('.toggle-color-btn').css("color", "green");
 				}
 			});
-		}
+		});
+
+
+
 
 
 		$(document).ready(function () {
-		
+			console.log("Document Ready"); // Confirm document is ready
+
+			// Function to handle form submission and validation
+			function handleFormSubmit() {
+				// Determine the selected reaction
+				var reaction;
+				if ($("#like-btn").hasClass("selected")) {
+					reaction = 1;
+				} else if ($("#heart-btn").hasClass("selected")) {
+					reaction = 2;
+				} else {
+					reaction = 0;
+				}
+				console.log("Reaction Value: " + reaction); // Debugging statement
+				var formData = {
+					firstName: $("#first-name").val(),
+					lastName: $("#last-name").val(),
+					dob: $("#dob").val(),
+					contact: $("#contact").val(),
+					contact2: $("#contact2").val(),
+					email: $("#email").val(),
+					address: $("#Address").val(),
+					message: $("#message").val(),
+					reaction: reaction
+				};
+
+				console.log(JSON.stringify(formData, null, 2));
+
+				// Show success message
+				toastr.success('Form data saved successfully!');
+				$("#contact-form")[0].reset(); // Reset form fields to default values
+
+				// Remove selected class from reaction buttons
+				$("#like-btn").removeClass("selected");
+				$("#heart-btn").removeClass("selected");
+				$(".input-error").removeClass("input-error");
+				$(".input-success").removeClass("input-success");
+			}
+
+			// Function to validate required fields
+			function validateRequiredFields() {
+				var isValid = true;
+
+				// Get the values of the required fields
+				var firstName = $("#first-name").val();
+				var lastName = $("#last-name").val();
+				var email = $("#email").val();
+				var contact = $("#contact").val();
+
+				// Check if required fields are filled
+				if (!firstName) {
+					$("#first-name").addClass("input-error").removeClass("input-success");
+					isValid = false;
+				} else {
+					$("#first-name").addClass("input-success").removeClass("input-error");
+				}
+
+				if (!lastName) {
+					$("#last-name").addClass("input-error").removeClass("input-success");
+					isValid = false;
+				} else {
+					$("#last-name").addClass("input-success").removeClass("input-error");
+				}
+
+				if (!email) {
+					$("#email").addClass("input-error").removeClass("input-success");
+					isValid = false;
+				} else {
+					$("#email").addClass("input-success").removeClass("input-error");
+				}
+
+				if (!contact) {
+					$("#contact").addClass("input-error").removeClass("input-success");
+					isValid = false;
+				} else {
+					$("#contact").addClass("input-success").removeClass("input-error");
+				}
+
+				return isValid;
+			}
+
+			// Attach submit handler to the submit button
+			$(".btn-submit").on("click", function () {
+				// Validate required fields
+				if (validateRequiredFields()) {
+					// Call handleFormSubmit if all required fields are filled
+					handleFormSubmit();
+				} else {
+					// Show error message if any required fields are empty
+					toastr.error('Please fill in all required fields: First Name, Last Name, Email, and Contact.');
+				}
+			});
+
+
 			$("#lblContact").click(function () {
 				if ($(window).width() < 768) { // Assuming 768 pixels is the threshold for mobile view
 					$(".icon").click();
@@ -646,20 +785,20 @@
 			});
 		});
 
-		var acc = document.getElementsByClassName("accordion");
-		var i;
+		// var acc = document.getElementsByClassName("accordion");
+		// var i;
 
-		for (i = 0; i < acc.length; i++) {
-			acc[i].addEventListener("click", function () {
-				this.classList.toggle("active");
-				var panel = this.nextElementSibling;
-				if (panel.style.maxHeight) {
-					panel.style.maxHeight = null;
-				} else {
-					panel.style.maxHeight = panel.scrollHeight + "px";
-				}
-			});
-		}
+		// for (i = 0; i < acc.length; i++) {
+		// 	acc[i].addEventListener("click", function () {
+		// 		this.classList.toggle("active");
+		// 		var panel = this.nextElementSibling;
+		// 		if (panel.style.maxHeight) {
+		// 			panel.style.maxHeight = null;
+		// 		} else {
+		// 			panel.style.maxHeight = panel.scrollHeight + "px";
+		// 		}
+		// 	});
+		// }
 		window.onscroll = function () { scrollFunction() };
 		function scrollFunction() {
 			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -757,6 +896,7 @@
 					rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
 			);
 		}
+
 		var myVar;
 		function myLoader() {
 			myVar = setTimeout(showPage, 3000);
@@ -842,11 +982,7 @@
 				sendButton.textContent = "Send";
 			});
 		}
-		$(function () {
-			$(".icon-set").click(function () {
-				$(".icon-set, .txt-span").toggleClass("press", 1000);
-			});
-		});
+	
 
 		document.addEventListener('DOMContentLoaded', function () {
 			const blockquotes = document.querySelectorAll('figure.snip1390 blockquote');
@@ -860,28 +996,42 @@
 		
 		const container = document.getElementById('our-team');
 
-		data.team.forEach((profile, index) => {
-			const figure = document.createElement('figure');
-			figure.className = 'snip1390';
+		// Assuming 'container' is the parent element where the profiles will be appended
 
-			figure.innerHTML = `
-				  <img src="${profile.img}" alt="${profile.name}" class="profile" />
-				  <figcaption>
-					<h2>${profile.name}</h2>
-					<h4>${profile.role}</h4>
-					<blockquote>${profile.quote}</blockquote>
-				  </figcaption>
+		if (!container) {
+			console.error('Container element not found');
+		}
+
+		// Check if data.team is available and not empty
+		if (data.team && data.team.length > 0) {
+			let row; // Declare row outside the loop
+
+			data.team.forEach((profile, index) => {
+				// Create a new row wrapper for every 3 profiles
+				if (index % 3 === 0) {
+					row = document.createElement('div');
+					row.className = 'profile-row';
+					container.appendChild(row);
+				}
+
+				const figure = document.createElement('figure');
+				figure.className = 'snip1390';
+
+				figure.innerHTML = `
+					<img src="${profile.img}" alt="${profile.name}" class="profile" />
+					<figcaption>
+						<h2>${profile.name}</h2>
+						<h4>${profile.role}</h4>
+						<blockquote>${profile.quote}</blockquote>
+					</figcaption>
 				`;
 
-			container.appendChild(figure);
-
-			// Add a break element after every three profiles
-			if ((index + 1) % 3 === 0) {
-				const breakElement = document.createElement('div');
-				breakElement.className = 'break';
-				container.appendChild(breakElement);
-			}
-		});
+				// Append the profile card to the current row
+				row.appendChild(figure);
+			});
+		} else {
+			console.error('No profiles to display');
+		}
 
 
 		//crousel
