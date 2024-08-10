@@ -728,15 +728,16 @@
 				console.log("Reaction Value: " + reaction); // Debugging statement
 
 				var formData = {
+					id: 0, // Convert to integer if required
 					firstName: $("#first-name").val(),
 					lastName: $("#last-name").val(),
-					dob: $("#dob").val(),
-					contact: $("#contact").val(),
-					contact2: $("#contact2").val(),
+					dob: $("#dob").val(),  // Ensure the date format is compatible with your server
+					contact: parseInt($("#contact").val(), 10),  // Convert to integer
+					contact2: $("#contact2").val() ? parseInt($("#contact2").val(), 10) : 0,  // Convert to integer or null
 					email: $("#email").val(),
 					address: $("#Address").val(),
 					message: $("#message").val(),
-					reaction: reaction
+					reaction: parseInt(reaction, 10)  // Ensure reaction is an integer
 				};
 
 				console.log(JSON.stringify(formData, null, 2));

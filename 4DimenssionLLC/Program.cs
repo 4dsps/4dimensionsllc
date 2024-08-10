@@ -1,5 +1,6 @@
+using _4DimenssionLLC;
 var builder = WebApplication.CreateBuilder(args);
-
+dimsConstant.SQLLiteConnectionString = builder.Configuration.GetValue<string>("ConnectionStrings:dbConnection");
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

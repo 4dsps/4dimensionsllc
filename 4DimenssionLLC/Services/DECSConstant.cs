@@ -1,5 +1,6 @@
-﻿namespace com.blazor.decs {
-    public static class DECSConstant {
+﻿namespace _4DimenssionLLC
+{
+    public static class dimsConstant {
         public static string UPDATED_SUCCESS = "<b> {0} </b> is updated successfully, at {1}";
         public static string PASSWORD_UPDATED_SUCCESS = "Password of <b> {0} </b> is updated successfully, at {1}";
         public static string VEHICLE_STATUSE_UPDATED_SUCCESS = "<b> {0} </b> status is updated successfully, at {1}";
@@ -27,6 +28,7 @@
         public static string Block_VEHICLE_CONFIRMATION_MESSAGE = "Are you sure, you want to Block the selected vehicle ? ";
         public static string SOLD_VEHICLE_CONFIRMATION_MESSAGE = "Are you sure, you want to change the selected vehicle status to Sold? ";
         public static string LIKE_VEHICLE_CONFIRMATION_MESSAGE = "Are you sure, you want to like vehicle? ";
+        public static string SQLLiteConnectionString = " ";
 
         public static string LOGGEDOUT_MESSAGE = "You are logged out....!";
         public static string LOGGEDOUT_MESSAGE_CONFIRMATION = "Are you sure, you want to log-out ? ";

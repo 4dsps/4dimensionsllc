@@ -25,7 +25,7 @@ namespace _4DimenssionLLC.services
         {
             if (sqliteConn == null)
             {
-                sqliteConn = new SQLiteConnection(GlobalSettings.SQLLiteConnectionString);
+                sqliteConn = new SQLiteConnection(dimsConstant.SQLLiteConnectionString);
                 try
                 {
                     sqliteConn.Open();
