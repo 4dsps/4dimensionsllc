@@ -670,47 +670,9 @@
 
 
 		$(document).ready(function () {
-			console.log("Document Ready"); // Confirm document is ready
-
+	
 			// Function to handle form submission and validation
 			function handleFormSubmit() {
-				// Determine the selected reaction
-				var reaction;
-				if ($("#like-btn").hasClass("selected")) {
-					reaction = 1;
-				} else if ($("#heart-btn").hasClass("selected")) {
-					reaction = 2;
-				} else {
-					reaction = 0;
-				}
-				console.log("Reaction Value: " + reaction); // Debugging statement
-				var formData = {
-					firstName: $("#first-name").val(),
-					lastName: $("#last-name").val(),
-					dob: $("#dob").val(),
-					contact: $("#contact").val(),
-					contact2: $("#contact2").val(),
-					email: $("#email").val(),
-					address: $("#Address").val(),
-					message: $("#message").val(),
-					reaction: reaction
-				};
-
-				console.log(JSON.stringify(formData, null, 2));
-
-				// Show success message
-				toastr.success('Form data saved successfully!');
-				$("#contact-form")[0].reset(); // Reset form fields to default values
-
-				// Remove selected class from reaction buttons
-				$("#like-btn").removeClass("selected");
-				$("#heart-btn").removeClass("selected");
-				$(".input-error").removeClass("input-error");
-				$(".input-success").removeClass("input-success");
-			}
-
-			// Function to validate required fields
-			function validateRequiredFields() {
 				var isValid = true;
 
 				// Get the values of the required fields
@@ -748,20 +710,74 @@
 					$("#contact").addClass("input-success").removeClass("input-error");
 				}
 
-				return isValid;
+				// If validation fails, show error message and return
+				if (!isValid) {
+					toastr.error('Please fill in all required fields: First Name, Last Name, Email, and Contact.');
+					return;
+				}
+
+				// Determine the selected reaction
+				var reaction;
+				if ($("#like-btn").hasClass("selected")) {
+					reaction = 1;
+				} else if ($("#heart-btn").hasClass("selected")) {
+					reaction = 2;
+				} else {
+					reaction = 0;
+				}
+				console.log("Reaction Value: " + reaction); // Debugging statement
+
+				var formData = {
+					firstName: $("#first-name").val(),
+					lastName: $("#last-name").val(),
+					dob: $("#dob").val(),
+					contact: $("#contact").val(),
+					contact2: $("#contact2").val(),
+					email: $("#email").val(),
+					address: $("#Address").val(),
+					message: $("#message").val(),
+					reaction: reaction
+				};
+
+				console.log(JSON.stringify(formData, null, 2));
+
+				// AJAX request to submit form data
+				$.ajax({
+					type: 'POST',
+					url: '/Home/AddContacts', // URL for the AddContacts action in the Home controller
+					data: JSON.stringify(formData), // Convert the form data to JSON
+					contentType: 'application/json; charset=utf-8',
+					dataType: 'json',
+					success: function (response) {
+						// Show success message
+						toastr.success('Form data saved successfully!');
+						$("#contact-form")[0].reset(); // Reset form fields to default values
+
+						// Remove selected class from reaction buttons
+						$("#like-btn").removeClass("selected");
+						$("#heart-btn").removeClass("selected");
+						$(".input-error").removeClass("input-error");
+						$(".input-success").removeClass("input-success");
+					},
+					error: function (xhr, status, error) {
+						// Show error message
+						toastr.error('An error occurred while saving the form data. Please try again.');
+					}
+				});
 			}
 
 			// Attach submit handler to the submit button
 			$(".btn-submit").on("click", function () {
-				// Validate required fields
-				if (validateRequiredFields()) {
-					// Call handleFormSubmit if all required fields are filled
-					handleFormSubmit();
-				} else {
-					// Show error message if any required fields are empty
-					toastr.error('Please fill in all required fields: First Name, Last Name, Email, and Contact.');
-				}
+				handleFormSubmit(); // Handle form submission including validation
 			});
+
+
+			// Attach submit handler to the submit button
+			$(".btn-submit").on("click", function () {
+				handleFormSubmit(); // Handle form submission including validation
+			});
+
+
 
 
 			$("#lblContact").click(function () {
