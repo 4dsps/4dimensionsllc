@@ -43,7 +43,7 @@
 	<!-- Toastr -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
-
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<!-- Your custom script -->
 	<script src="~/js/site.js"></script>
 </head>
@@ -125,10 +125,10 @@
 @* 					<img src="~/images/4dlogo.png" class="inline-photo show-on-scroll" alt="INFERNO">
  *@				</td>
 			</tr>
-			<tr>
+			@* <tr>
 				<td></td>
-				<td>@* <span class="copnyNameStyle"> 4Dimensions LLC</span> *@<img class="logo-width mbl-view" src="~/images/4dlogo.png" /></td>
-			</tr>
+				<td><span class="copnyNameStyle"> 4Dimensions LLC</span><img class="logo-width mbl-view" src="~/images/4dlogo.png" /></td>
+			</tr> *@
 		</table>
 	</div>
 	<h1 class="title clr-black ourTeamHead"> Our Team </h1>
@@ -512,55 +512,101 @@
 				</div>
 
 				<div class="modal-body">
-					<div class="container">
-						<div class="form-container">
+				
+					<div class="tab_container">
+						<input class="tab-input" id="tab1" type="radio" name="tabs" checked>
+						<label for="tab1"><i class="fa fa-phone"></i><span>Contact</span></label>
+
+						<input id="tab2" type="radio" name="tabs" class="tab-input">
+						<label for="tab2"><i class="fa fa-thumbs-up"></i><span>View Likes</span></label>
+
+						
+
+						<section id="content1"  class="tab-content">
 							
-							<div class="right-container">
-								<div class="right-inner-container">
-									<form id="contact-form" enctype="multipart/form-data" method="post">
-        <input type="text" id="first-name" placeholder="First Name" required/>
-        <input type="text" id="last-name" placeholder="Last Name" required/>
-        <input type="date" id="dob" placeholder="Date Of Birth" required/>
-        <input type="number" id="contact" placeholder="Contact 1" required/>
-        <input type="number" id="contact2" placeholder="Contact 2" />
-        <input type="email" pattern="^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required title="Please enter a valid email address" id="email" placeholder="Email" />
-        <textarea id="Address" rows="2" placeholder="Address"></textarea>
-        <textarea id="message" rows="4" placeholder="Message"></textarea>
 
-										<div class="like-container mt-2">
-											<div class="icon-label mt-2">
-												<button type="button" class="btn green">
-													<div class="icon-label-content">
-														<i class="fa fa-thumbs-up fa-lg default-clr toggle-color-btn"value="1"></i>
-														<span class="like-label">Like It</span> <!-- Label for Like -->
-													</div>
-												</button>
-											</div>
-
-											<div class="icon-label mt-2">
-												<button type="button" class="btn heart-react">
-													<div class="icon-label-content">
-														<i class="fa fa-heart icon-set mg-icn" value="2"></i>
-														<span class="heart-label">Love It</span> <!-- Label for Heart -->
-													</div>
-												</button>
-											</div>
-										</div>
-
-
-
-
-
-        <div class="button-container mt-3">
-            <button type="reset" class="btn-reset">Reset</button>
-            <button type="button"id="contactSubmit" class="btn-submit">Submit</button>
+									<div class="right-container">
+										
+											<form id="contact-form" enctype="multipart/form-data" method="post">
+												  <div class="row">
+        <div class="col-md-6">
+          <input type="text" id="first-name" class="form-control" placeholder="First Name" required />
         </div>
-    </form>
+        <div class="col-md-6">
+          <input type="text" id="last-name" class="form-control" placeholder="Last Name" required />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <input type="date" id="dob" class="form-control" placeholder="Date Of Birth" required />
+        </div>
+        <div class="col-md-6">
+          <input type="number" id="contact" class="form-control" placeholder="Contact 1" required />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <input type="number" id="contact2" class="form-control" placeholder="Contact 2" />
+        </div>
+        <div class="col-md-6">
+          <input type="email" pattern="^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address" id="email" class="form-control" placeholder="Email" required />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <textarea id="address" class="form-control" rows="2" placeholder="Address"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <textarea id="message" class="form-control" rows="3" placeholder="Message"></textarea>
+        </div>
+      </div>
 
-								</div>
+												<div class="like-container mt-2">
+													<div class="icon-label mt-2">
+														<button type="button" class="btn green" id="btn-Like">
+															<div class="icon-label-content">
+																<i class="fa fa-thumbs-up fa-lg default-clr toggle-color-btn"></i>
+																<span class="like-label">Like It</span> <!-- Label for Like -->
+															</div>
+														</button>
+													</div>
+
+													<div class="icon-label mt-2">
+														<button type="button" class="btn heart-react" id="btn-Love">
+															<div class="icon-label-content">
+																<i class="fa fa-heart icon-set mg-icn"></i>
+																<span class="heart-label">Love It</span> <!-- Label for Heart -->
+															</div>
+														</button>
+													</div>
+												</div>
+
+
+
+
+
+												<div class="button-container mt-3">
+													<button type="reset" class="btn-reset">Reset</button>
+													<button type="button" id="contactSubmit" class="btn-submit">Submit</button>
+												</div>
+											</form>
+
+							
 							</div>
-						</div>
+						</section>
+
+						<section id="content2" class="tab-content">
+							<canvas id="myChart" width="400" height="200"></canvas>
+						</section>
+
+						
 					</div>
+
+					
+
+				
 				</div>
 				
 			</div>
@@ -584,14 +630,14 @@
 
 				<div class="like-container-Home">
 			<div class="icon-label ">
-				<button type="button" class="btn green">
+				<button type="button" class="btn green" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 					<i class="fa fa-thumbs-up fa-lg default-clr toggle-color-btn"></i>
 				</button>
 			
 			</div>
 
-			<div class="icon-label mt-3">
-				<button type="button" class="btn heart-react">
+			<div class="icon-label mt-3" >
+				<button type="button" class="btn heart-react" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 					<i class="fa fa-heart icon-set mg-icn"></i>
 				</button>
 			
@@ -680,6 +726,7 @@
 				var lastName = $("#last-name").val();
 				var email = $("#email").val();
 				var contact = $("#contact").val();
+				var dob = $("#dob").val();
 
 				// Check if required fields are filled
 				if (!firstName) {
@@ -709,6 +756,12 @@
 				} else {
 					$("#contact").addClass("input-success").removeClass("input-error");
 				}
+				if (!dob) {
+					$("#dob").addClass("input-error").removeClass("input-success");
+					isValid = false;
+				} else {
+					$("#dob").addClass("input-success").removeClass("input-error");
+				}
 
 				// If validation fails, show error message and return
 				if (!isValid) {
@@ -718,55 +771,57 @@
 
 				// Determine the selected reaction
 				var reaction;
-				if ($("#like-btn").hasClass("selected")) {
-					reaction = 1;
-				} else if ($("#heart-btn").hasClass("selected")) {
-					reaction = 2;
-				} else {
-					reaction = 0;
-				}
-				console.log("Reaction Value: " + reaction); // Debugging statement
+				
 
 				var formData = {
 					Id: 0, // Convert to integer if required
 					FirstName: $("#first-name").val(),
 					LastName: $("#last-name").val(),
 					Dob: $("#dob").val(),  // Ensure the date format is compatible with your server
-					Contact: parseInt($("#contact").val(), 10),  // Convert to integer
+					Contact1: parseInt($("#contact").val(), 10),  // Convert to integer
+					month: 1,  // Convert to integer
+					likereaction: parseInt($("#btn-Like").hasClass("selected") ? 1 : 0, 10),
+					lovereaction: parseInt($("#btn-Love").hasClass("selected") ? 1 : 0, 10),
 					Contact2: $("#contact2").val() ? parseInt($("#contact2").val(), 10) : 0,  // Convert to integer or null
 					Email: $("#email").val(),
-					Address: $("#Address").val(),
+					Address: $("#address").val(),
 					Message: $("#message").val(),
-					Reaction: parseInt(reaction, 10)  // Ensure reaction is an integer
 				};
-
 				console.log(JSON.stringify(formData));
 
 				// AJAX request to submit form data
 				$.ajax({
 					type: 'POST',
-					url: '/Home/AddContacts', // URL for the AddContacts action in the Home controller
-					data: JSON.stringify(formData), // Convert the form data to JSON															
+					url: '/Home/AddContacts',
+					data: JSON.stringify(formData),
 					processData: false,
 					dataType: 'json',
 					contentType: 'application/json',
 					success: function (response) {
-						console.log(JSON.stringify(response, null, 2));
-						// Show success message
-						toastr.success('Form data saved successfully!');
-						$("#contact-form")[0].reset(); // Reset form fields to default values
+						console.log('Response:', response);
+						console.log('Status:', response.status);
 
-						// Remove selected class from reaction buttons
-						$("#like-btn").removeClass("selected");
-						$("#heart-btn").removeClass("selected");
-						$(".input-error").removeClass("input-error");
-						$(".input-success").removeClass("input-success");
+						if (response && response.status === true) {
+							toastr.success('Form data saved successfully!');
+							$("#contact-form")[0].reset();
+
+							$("#btn-Like").removeClass("selected");
+							$("#btn-Love").removeClass("selected");
+							$(".input-error").removeClass("input-error");
+							$(".input-success").removeClass("input-success");
+						} else {
+							toastr.error(response.message || 'Form data could not be saved. Please try again.');
+						}
 					},
 					error: function (xhr, status, error) {
-						// Show error message
+						console.log('Error:', error);
+						console.log('Status:', status);
+
 						toastr.error('An error occurred while saving the form data. Please try again.');
 					}
 				});
+
+
 			}
 
 			// Attach submit handler to the submit button
@@ -775,12 +830,7 @@
 			});
 
 
-			// Attach submit handler to the submit button
-			$(".btn-submit").on("click", function () {
-				handleFormSubmit(); // Handle form submission including validation
-			});
-
-
+		
 
 
 			$("#lblContact").click(function () {
@@ -1101,5 +1151,113 @@
 
 			innerContainer.appendChild(item);
 		});
+
+		//reactions graph start
+		document.addEventListener('DOMContentLoaded', function () {
+			const ctx = document.getElementById('myChart').getContext('2d');
+
+			// Function to fetch data from the server
+			async function fetchData() {
+				try {
+					const response = await fetch('/Home/GetContactsStats');
+					const rawData = await response.json();
+					console.log('Fetched Data:', rawData); // Log the raw data to the console
+
+					// Check if the 'data' property exists and is an object
+					if (rawData && rawData.data) {
+						const dataItem = rawData.data;
+
+						// Construct the data structure required by Chart.js
+						const labels = [dataItem.monthName];
+						const likeData = [dataItem.likecount];
+						const loveData = [dataItem.lovecount];
+						console.log('loveData:', JSON.stringify(loveData));
+						console.log('likeData:', JSON.stringify(likeData));
+						return {
+							labels: labels,
+							datasets: [
+								{
+									label: 'Like',
+									data: likeData,
+									borderColor: 'rgba(75, 192, 192, 1)',
+									backgroundColor: 'rgba(75, 192, 192, 0.2)',
+									fill: false,
+									tension: 0.4
+								},
+								{
+									label: 'Love',
+									data: loveData,
+									borderColor: 'rgba(153, 102, 255, 1)',
+									backgroundColor: 'rgba(153, 102, 255, 0.2)',
+									fill: false,
+									tension: 0.4
+								}
+							]
+						};
+					} else {
+						console.error('Unexpected data format:', rawData);
+						return null;
+					}
+				} catch (error) {
+					console.error('Error fetching data:', error);
+				}
+			}
+
+			// Create the chart
+			async function createChart() {
+				const data = await fetchData();
+
+				if (data) {
+					const myChart = new Chart(ctx, {
+						type: 'line',
+						data: data,
+						options: {
+							plugins: {
+								legend: {
+									labels: {
+										color: 'white'
+									}
+								},
+								tooltip: {
+									titleColor: 'white',
+									bodyColor: 'white',
+									footerColor: 'white'
+								}
+							},
+							scales: {
+								x: {
+									title: {
+										display: true,
+										text: 'Month',
+										color: 'white'
+									},
+									ticks: {
+										color: 'white'
+									}
+								},
+								y: {
+									title: {
+										display: true,
+										text: 'Number of Reactions',
+										color: 'white'
+									},
+									ticks: {
+										color: 'white'
+									}
+								}
+							}
+						}
+					});
+				}
+			}
+
+			createChart();
+		});
+
+
+		//reactions graph end
+
+
+
 	</script>
 	</body>

@@ -76,26 +76,37 @@ namespace _4DimenssionLLC.Controllers
 			try
 			{
 				Int64 contactId = Convert.ToInt64(pModel.Id);
-
-				//ContactFormViewModel dbObj = new ContactFormViewModel
-				//{
-				//	Id = 0,
-				//	FirstName = "John",
-				//	LastName = "Doe",
-				//	Dob = DateTime.Now,
-				//	Contact = 1234567890,
-				//	Contact2 = 1234567890,
-				//	Email = "john.doe@example.com",
-				//	Address = "123 Elm St",
-				//	Message = "Test message",
-				//	Reaction = 1
-				//};
-				
-
 				// Save contact information
 				SQLiteDbManager.SaveContactForm(pModel);
 				response.data = contactId;
 				response.status = true;
+			}
+			catch (Exception ex)
+			{
+				response.status = false;
+				response.message = ex.Message;
+			}
+			return response;
+		}
+
+		[HttpGet]
+		public async Task<BlazorResponseViewModel> GetContactsStats()
+		{
+			BlazorResponseViewModel response = new BlazorResponseViewModel();
+			try
+			{
+				// Retrieve contact information
+				var contact = SQLiteDbManager.GetContactStats();
+				if (contact != null)
+				{
+					response.data = contact;
+					response.status = true;
+				}
+				else
+				{
+					response.status = false;
+					response.message = "Contact not found.";
+				}
 			}
 			catch (Exception ex)
 			{
