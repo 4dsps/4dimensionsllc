@@ -438,7 +438,7 @@ header {
 
 .row {
     display: flex;
-   /* gap: 20px;*/
+    gap: 30px;
 }
 
 .col-md-6{
@@ -1408,13 +1408,20 @@ header {
 }
 
 /*contact use css start*/
-#contact {
+/*#contact {
     width: 100%;
     height: 100%;
     background-color: #ebeff7;
     margin-top: 1em;
 }
+*/
 
+.form-control:focus {
+    background: #14345b;
+    color: white !important; /* Ensure the text color remains visible */
+    border-color: #007bff; /* Optional: change the border color on focus */
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Optional: add a shadow */
+}
 .section-header {
     text-align: center;
     margin: 0 auto;
@@ -1444,14 +1451,9 @@ header {
 }
 
 .form-control {
-    border: 1px solid #1e242b;
+    border: 1px solid #ecf0f466;
     margin-top: 0.5em;
-    /* color:white!important;*/
-}.form-control:focus {
-    border: 1px solid #0b3779;
-    margin-top: 0.5em;
-    color:white!important;
-   background-color:black!important;
+    color: white !important;
 }
 .form-control,
 textarea {
@@ -2106,8 +2108,18 @@ h2 {
 
 .form-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between items */
 }
 
+    .form-container input,
+    .form-container textarea {
+        flex: 1 1 calc(50% - 10px); /* Two columns with spacing */
+    }
+
+    .form-container textarea {
+        flex: 1 1 100%; /* Textareas span full width */
+    }
 .left-container {
     flex: 1;
     height: 480px;
@@ -2119,8 +2131,12 @@ h2 {
     align-items: center;
     position: relative;
 }
+.button-container{
+    text-align:center;
+}
 .button-container .btn-submit {
     flex: 1;
+    text-align: center;
     margin-right: 10px; /* Add spacing between buttons */
 }
 
@@ -2135,7 +2151,7 @@ h2 {
     font-size: 1.4em;
 }
 .right-container {
-    display: flex;
+   /* display: flex;*/
     flex: 1;
  /*   height: 460px;*/
   /*  background-color: #fff;*/
@@ -2191,7 +2207,7 @@ input, textarea {
     margin: 8px 0;
     width: 100%;
     font-size: 0.8rem;
-    color: black;
+    color: white;
 }
 
     input:focus, textarea:focus {
@@ -2216,11 +2232,11 @@ button {
         opacity: 0.7;
     }
 input::placeholder {
-    color: black!important; /* Change this color to whatever you need */
+    color: white; /* Change this color to whatever you need */
     opacity: 1; /* Ensure full opacity for placeholder text */
 }
 textarea::placeholder {
-    color: black!important; /* Change this color to whatever you need */
+    color: white; /* Change this color to whatever you need */
     opacity: 1; /* Ensure full opacity for placeholder text */
 }
 @media only screen and (max-width: 600px) {
@@ -2755,3 +2771,111 @@ figure.snip1390 blockquote {
     font-size: 1.5em;
     padding-right: 2em;
 }
+
+
+/*tabs css start*/
+
+
+/*Fun begins*/
+.tab_container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.tab-input, .tab-content {
+    clear: both;
+    padding-top: 10px;
+    display: none;
+}
+
+label {
+    font-weight: 700;
+    font-size: 18px;
+    display: block;
+    float: left;
+    width: 48%;
+    padding: 0.7em;
+    margin-left: 10px;
+    border-radius: 10px;
+    color: #200e0e;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    background: #00b4cf;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5 {
+    display: block;
+    padding: 20px;
+/*    background: #fff;
+*/    color: #999;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.tab_container .tab-content p,
+.tab_container .tab-content h3 {
+    -webkit-animation: fadeInScale 0.7s ease-in-out;
+    -moz-animation: fadeInScale 0.7s ease-in-out;
+    animation: fadeInScale 0.7s ease-in-out;
+}
+
+.tab_container .tab-content h3 {
+    text-align: center;
+}
+
+.tab_container [id^="tab"]:checked + label {
+    background: #00b4cf;
+    box-shadow: inset 0 3px #0CE;
+    color:white;
+}
+
+    .tab_container [id^="tab"]:checked + label .fa {
+        color: #fff;
+    }
+
+label .fa {
+    font-size: 1.3em;
+    margin: 0 0.4em 0 0;
+}
+
+/*Media query*/
+@media only screen and (max-width: 900px) {
+    label span {
+        display: none;
+    }
+
+    .tab_container {
+        width: 98%;
+    }
+}
+
+/*Content Animation*/
+@keyframes fadeInScale {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.no_wrap {
+    text-align: center;
+    color: #0ce;
+}
+
+.link {
+    text-align: center;
+}
+
+
+
+/*tabs css end*/
