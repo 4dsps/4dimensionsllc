@@ -8,6 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="bin\Debug\4dimsllc.db" />
+    <None Include="bin\Release\4dimsllc.db" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
   </ItemGroup>
 

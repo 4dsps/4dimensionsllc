@@ -70,31 +70,30 @@ namespace _4DimenssionLLC.Controllers
 		}
 
 		[HttpPost]
-		public async Task<BlazorResponseViewModel> AddContacts([FromForm] ContactFormViewModel pModel)
+		public async Task<BlazorResponseViewModel> AddContacts([FromBody] ContactFormViewModel pModel)
 		{
 			BlazorResponseViewModel response = new BlazorResponseViewModel();
 			try
 			{
 				Int64 contactId = Convert.ToInt64(pModel.Id);
-				List<ContactFormViewModel> fList = new List<ContactFormViewModel>
-				{
-					new ContactFormViewModel
-					{
-						Id = 1,
-						FirstName = "John",
-						LastName = "Doe",
-						Dob = DateTime.Now,
-						Contact = 1234567890,
-						Contact2 = 1234567890,
-						Email = "john.doe@example.com",
-						Address = "123 Elm St",
-						Message = "Test message",
-						Reaction = 1
-					}
-				};
+
+				//ContactFormViewModel dbObj = new ContactFormViewModel
+				//{
+				//	Id = 0,
+				//	FirstName = "John",
+				//	LastName = "Doe",
+				//	Dob = DateTime.Now,
+				//	Contact = 1234567890,
+				//	Contact2 = 1234567890,
+				//	Email = "john.doe@example.com",
+				//	Address = "123 Elm St",
+				//	Message = "Test message",
+				//	Reaction = 1
+				//};
+				
 
 				// Save contact information
-				SQLiteDbManager.SaveContactForm(fList.FirstOrDefault());
+				SQLiteDbManager.SaveContactForm(pModel);
 				response.data = contactId;
 				response.status = true;
 			}

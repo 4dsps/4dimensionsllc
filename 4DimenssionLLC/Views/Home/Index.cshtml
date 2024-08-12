@@ -728,27 +728,28 @@
 				console.log("Reaction Value: " + reaction); // Debugging statement
 
 				var formData = {
-					id: 0, // Convert to integer if required
-					firstName: $("#first-name").val(),
-					lastName: $("#last-name").val(),
-					dob: $("#dob").val(),  // Ensure the date format is compatible with your server
-					contact: parseInt($("#contact").val(), 10),  // Convert to integer
-					contact2: $("#contact2").val() ? parseInt($("#contact2").val(), 10) : 0,  // Convert to integer or null
-					email: $("#email").val(),
-					address: $("#Address").val(),
-					message: $("#message").val(),
-					reaction: parseInt(reaction, 10)  // Ensure reaction is an integer
+					Id: 0, // Convert to integer if required
+					FirstName: $("#first-name").val(),
+					LastName: $("#last-name").val(),
+					Dob: $("#dob").val(),  // Ensure the date format is compatible with your server
+					Contact: parseInt($("#contact").val(), 10),  // Convert to integer
+					Contact2: $("#contact2").val() ? parseInt($("#contact2").val(), 10) : 0,  // Convert to integer or null
+					Email: $("#email").val(),
+					Address: $("#Address").val(),
+					Message: $("#message").val(),
+					Reaction: parseInt(reaction, 10)  // Ensure reaction is an integer
 				};
 
-				console.log(JSON.stringify(formData, null, 2));
+				console.log(JSON.stringify(formData));
 
 				// AJAX request to submit form data
 				$.ajax({
 					type: 'POST',
 					url: '/Home/AddContacts', // URL for the AddContacts action in the Home controller
-					data: JSON.stringify(formData), // Convert the form data to JSON
-					contentType: 'application/json; charset=utf-8',
+					data: JSON.stringify(formData), // Convert the form data to JSON															
+					processData: false,
 					dataType: 'json',
+					contentType: 'application/json',
 					success: function (response) {
 						console.log(JSON.stringify(response, null, 2));
 						// Show success message

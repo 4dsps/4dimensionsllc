@@ -98,14 +98,14 @@ namespace _4DimenssionLLC.services
                     {
                         // Insert new contact
                         sqlitecmd.CommandText = @"
-                    INSERT INTO ContactForm (FirstName, LastName, Dob, Contact, Contact2, Email, Address, Message, Reaction)
-                    VALUES (@FirstName, @LastName, @Dob, @Contact, @Contact2, @Email, @Address, @Message, @Reaction);
+                    INSERT INTO ContactForm (FirstName, LastName, Dob, Contact1, Contact2, Email, Address, Message, Reaction)
+                    VALUES (@FirstName, @LastName, @Dob, @Contact1, @Contact2, @Email, @Address, @Message, @Reaction);
                 ";
 
                         sqlitecmd.Parameters.AddWithValue("@FirstName", contact.FirstName ?? string.Empty);
                         sqlitecmd.Parameters.AddWithValue("@LastName", contact.LastName ?? string.Empty);
                         sqlitecmd.Parameters.AddWithValue("@Dob", contact.Dob);
-                        sqlitecmd.Parameters.AddWithValue("@Contact", contact.Contact);
+                        sqlitecmd.Parameters.AddWithValue("@Contact1", contact.Contact);
                         sqlitecmd.Parameters.AddWithValue("@Contact2", (object)contact.Contact2 ?? DBNull.Value); // Handle nullable int
                         sqlitecmd.Parameters.AddWithValue("@Email", contact.Email ?? string.Empty);
                         sqlitecmd.Parameters.AddWithValue("@Address", contact.Address ?? string.Empty);
@@ -117,12 +117,9 @@ namespace _4DimenssionLLC.services
                     else
                     {
                         // Update existing contact
-                        sqlitecmd.CommandText = @"
-                    UPDATE ContactForm
-                    SET FirstName = @FirstName,
-                        LastName = @LastName,
+                        sqlitecmd.CommandText = @" UPDATE ContactForm SET FirstName = @FirstName,LastName = @LastName,
                         Dob = @Dob,
-                        Contact = @Contact,
+                        Contact1 = @Contact1,
                         Contact2 = @Contact2,
                         Email = @Email,
                         Address = @Address,
@@ -134,7 +131,7 @@ namespace _4DimenssionLLC.services
                         sqlitecmd.Parameters.AddWithValue("@FirstName", contact.FirstName ?? string.Empty);
                         sqlitecmd.Parameters.AddWithValue("@LastName", contact.LastName ?? string.Empty);
                         sqlitecmd.Parameters.AddWithValue("@Dob", contact.Dob);
-                        sqlitecmd.Parameters.AddWithValue("@Contact", contact.Contact);
+                        sqlitecmd.Parameters.AddWithValue("@Contact1", contact.Contact);
                         sqlitecmd.Parameters.AddWithValue("@Contact2", (object)contact.Contact2 ?? DBNull.Value); // Handle nullable int
                         sqlitecmd.Parameters.AddWithValue("@Email", contact.Email ?? string.Empty);
                         sqlitecmd.Parameters.AddWithValue("@Address", contact.Address ?? string.Empty);
