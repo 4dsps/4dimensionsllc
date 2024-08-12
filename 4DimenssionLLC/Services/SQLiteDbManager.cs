@@ -84,6 +84,7 @@ namespace _4DimenssionLLC.services
         }
         public static void SaveContactForm(ContactFormViewModel contact)
         {
+			
             if (sqliteConn == null)
                 sqliteConn = GetSQLiteConnection();
 
@@ -149,19 +150,22 @@ namespace _4DimenssionLLC.services
                         sqlitecmd.ExecuteNonQuery();
                     }
                 }
-            }
-            catch (Exception ex)
+            }			
+			catch (Exception ex)
             {
                 // Handle any exceptions that occur during the save operation
                 Console.WriteLine("Error: " + ex.Message);
-            }
-            finally
+				throw ex;
+
+			}			
+			finally
             {
                 // Ensure the connection is closed
                 if (sqliteConn.State != System.Data.ConnectionState.Closed)
-                    sqliteConn.Close();
-            }
-        }
+                    sqliteConn.Close();			
+
+			}		
+		}
 		public static ContactsStatsViewModel GetContactStats()
 		{
 			ContactsStatsViewModel stats = null;

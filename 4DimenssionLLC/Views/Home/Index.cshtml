@@ -798,8 +798,8 @@
 					dataType: 'json',
 					contentType: 'application/json',
 					success: function (response) {
-						console.log('Response:', response);
-						console.log('Status:', response.status);
+						// console.log('Response:', response);
+						// console.log('Status:', response.status);
 
 						if (response && response.status === true) {
 							toastr.success('Form data saved successfully!');
@@ -814,8 +814,8 @@
 						}
 					},
 					error: function (xhr, status, error) {
-						console.log('Error:', error);
-						console.log('Status:', status);
+						// console.log('Error:', error);
+						// console.log('Status:', status);
 
 						toastr.error('An error occurred while saving the form data. Please try again.');
 					}
