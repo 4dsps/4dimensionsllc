@@ -750,6 +750,7 @@
 					contentType: 'application/json; charset=utf-8',
 					dataType: 'json',
 					success: function (response) {
+						console.log(JSON.stringify(response, null, 2));
 						// Show success message
 						toastr.success('Form data saved successfully!');
 						$("#contact-form")[0].reset(); // Reset form fields to default values
