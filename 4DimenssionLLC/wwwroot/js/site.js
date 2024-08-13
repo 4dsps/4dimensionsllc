@@ -54,23 +54,23 @@ const data = {
 			"remarks": "Exellent Service",
 			"pics": ["images/event2.jpg", ]
 		},
-		{
-			"id": 2,
-			"name": "Beats Bash",
-			"remarks": "Exellent Work",
-			"pics": ["images/event3.jpg"]
-		},
-		{
-			"id": 3,
-			"name": "Feel Good Fair",
-			"remarks": "Leading the team",
-			"pics": ["images/event4.jfif"]
-		},
-		{
-			"id": 4,
-			"name": "Edge Expo",
-			"remarks": "Best Performance",
-			"pics": ["images/event5.jpg"]
-		}
+		//{
+		//	"id": 2,
+		//	"name": "Beats Bash",
+		//	"remarks": "Exellent Work",
+		//	"pics": ["images/event3.jpg"]
+		//},
+		//{
+		//	"id": 3,
+		//	"name": "Feel Good Fair",
+		//	"remarks": "Leading the team",
+		//	"pics": ["images/event4.jfif"]
+		//},
+		//{
+		//	"id": 4,
+		//	"name": "Edge Expo",
+		//	"remarks": "Best Performance",
+		//	"pics": ["images/event5.jpg"]
+		//}
 	]
 };
