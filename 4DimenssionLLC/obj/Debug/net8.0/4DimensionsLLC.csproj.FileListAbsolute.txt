@@ -59,6 +59,7 @@ C:\Blazor Projects\4dimensionsllcweb\4DimenssionLLC\obj\Debug\net8.0\4Dimensions
 C:\Blazor Projects\4dimensionsllcweb\4DimenssionLLC\obj\Debug\net8.0\4Dimensi.B6821E4E.Up2Date
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\bin\Debug\net8.0\appsettings.Development.json
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\bin\Debug\net8.0\appsettings.json
+D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\bin\Debug\net8.0\4dimsllc.db
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\bin\Debug\net8.0\4DimensionsLLC.staticwebassets.runtime.json
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\bin\Debug\net8.0\4DimensionsLLC.exe
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\bin\Debug\net8.0\4DimensionsLLC.deps.json

@@ -3,6 +3,8 @@ using _4DimenssionLLC.services;
 using _4DimenssionLLC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.Diagnostics;
 using System.Net.Mail;
 using System.Threading.Tasks;
@@ -80,6 +82,22 @@ namespace _4DimenssionLLC.Controllers
 				SQLiteDbManager.SaveContactForm(pModel);
 				response.data = contactId;
 				response.status = true;
+			}
+			catch (SQLiteException ex)
+			{
+				response.status = false;
+				if (ex.Message.ToLower().Contains("unique"))
+					response.message = "Opinion | contact from user already submitted!!!";
+				else
+					response.message = ex.Message;
+			}
+			catch (SqlException ex)
+			{
+				response.status = false;
+				if (ex.Message.ToLower().Contains("unique"))
+					response.message = "Opinion | contact from user already submitted!!!";
+				else
+					response.message = ex.Message;
 			}
 			catch (Exception ex)
 			{

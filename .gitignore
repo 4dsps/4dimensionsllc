@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs
+/4DimenssionLLC/bin/Debug/net8.0/4dimsllc.db
+/4DimenssionLLC/bin/Release/net8.0/4dimsllc.db
