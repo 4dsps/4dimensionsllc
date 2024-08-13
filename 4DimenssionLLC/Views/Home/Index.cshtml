@@ -134,7 +134,7 @@
 	<h1 class="title clr-black ourTeamHead"> Our Team </h1>
 	<section class="ourTeam" id="our-team"></section>
 
-	
+	<hr class="hr-color" />
 
 	<!--CARDS-->
 	<section class="section0" id="ServiceSection">
@@ -175,7 +175,7 @@
 
 		</div>
 	</section>
-
+	<hr class="hr-color" />
 
 	<!--CONTAINER-->
 	<div class="container section" id="fleetManagement">
@@ -217,7 +217,7 @@
 		</table>
 	</div>
 
-
+	<hr class="hr-color" />
 	<section class="slick" id="moreaboutus">
 		<div class="banner mt-4">
 			<h1 class="title clr-black"> Benefits We Offer </h1>
@@ -394,9 +394,10 @@
 		</div>
 
 	</section> *@
+	<hr class="hr-color" />
 	<section id="eventId" class="event-section">
-		<h1 class="title clr-black ourTeamHead"> Events</h1>
-		<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+@* 		<h1 class="title clr-black ourTeamHead"> Events</h1>
+ *@		<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
 			<div class="carousel-indicators" id="carousel-indicators"></div>
 			<div class="carousel-inner" id="carousel-inner"></div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
@@ -514,11 +515,11 @@
 				<div class="modal-body">
 				
 					<div class="tab_container">
-						<input class="tab-input" id="tab1" type="radio" name="tabs" checked>
-						<label for="tab1"><i class="fa fa-phone"></i><span>Contact</span></label>
+						<input class="tab-input " id="tab1" type="radio" name="tabs" checked>
+						<label class="lbl-tab" for="tab1"><i class="fa fa-phone "></i><span>Contact</span></label>
 
 						<input id="tab2" type="radio" name="tabs" class="tab-input">
-						<label for="tab2"><i class="fa fa-thumbs-up"></i><span>View Likes</span></label>
+						<label class="lbl-tab" for="tab2"><i class="fa fa-thumbs-up "></i><span>View Likes</span></label>
 
 						
 
@@ -528,69 +529,83 @@
 									<div class="right-container">
 										
 											<form id="contact-form" enctype="multipart/form-data" method="post">
-												  <div class="row">
-        <div class="col-md-6">
-          <input type="text" id="first-name" class="form-control" placeholder="First Name" required />
-        </div>
-        <div class="col-md-6">
-          <input type="text" id="last-name" class="form-control" placeholder="Last Name" required />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <input type="date" id="dob" class="form-control" placeholder="Date Of Birth" required />
-        </div>
-        <div class="col-md-6">
-          <input type="number" id="contact" class="form-control" placeholder="Contact 1" required />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <input type="number" id="contact2" class="form-control" placeholder="Contact 2" />
-        </div>
-        <div class="col-md-6">
-          <input type="email" pattern="^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address" id="email" class="form-control" placeholder="Email" required />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <textarea id="address" class="form-control" rows="2" placeholder="Address"></textarea>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <textarea id="message" class="form-control" rows="3" placeholder="Message"></textarea>
-        </div>
-      </div>
+												  <div class="row ">
+										<div class="col-md-6 gap-add">
+											<input type="text" id="first-name" class="form-control" placeholder="First Name" maxlength="10" required />
+                                        </div>
+										<div class="col-md-6 gap-add">
+											<input type="text" id="last-name" class="form-control" placeholder="Last Name" maxlength="10" required />
+                                          </div>
+                                       </div>
+									<div class="row">
+										<div class="col-md-6 gap-add">
+											<input type="date" id="dob" class="form-control" placeholder="Date Of Birth" required />
+										</div>
+										<div class="col-md-6 gap-add">
+											<input type="number" id="contact" class="form-control" maxlength="11" placeholder="Contact 1" required />
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6 gap-add">
+											<input type="number" id="contact2" class="form-control" maxlength="11" placeholder="Contact 2" />
+										</div>
+										<div class="col-md-6 gap-add">
+											<input type="email" pattern="^[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address" id="email" class="form-control" placeholder="Email" required />
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<textarea id="address" class="form-control" rows="2" placeholder="Address"></textarea>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<textarea id="message" class="form-control" rows="3" placeholder="Message"></textarea>
+										</div>
+									</div>
 
-												<div class="like-container mt-2">
-													<div class="icon-label mt-2">
-														<button type="button" class="btn green" id="btn-Like">
-															<div class="icon-label-content">
-																<i class="fa fa-thumbs-up fa-lg default-clr toggle-color-btn"></i>
-																<span class="like-label">Like It</span> <!-- Label for Like -->
-															</div>
-														</button>
-													</div>
-
-													<div class="icon-label mt-2">
-														<button type="button" class="btn heart-react" id="btn-Love">
-															<div class="icon-label-content">
-																<i class="fa fa-heart icon-set mg-icn"></i>
-																<span class="heart-label">Love It</span> <!-- Label for Heart -->
-															</div>
-														</button>
-													</div>
+									<div class="container mt-3">
+										<div class="row">
+											<div class="col-md-6 mb-2 mbl-view-btn">
+												<div class="icon-label">
+													<button type="button" class="btn green" id="btn-Like">
+														<div class="icon-label-content">
+															<i class="fa fa-thumbs-up fa-lg default-clr toggle-color-btn"></i>
+															<span class="like-label">Like It</span> <!-- Label for Like -->
+														</div>
+													</button>
 												</div>
+											</div>
 
-
-
-
-
-												<div class="button-container mt-3">
-													<button type="reset" class="btn-reset">Reset</button>
-													<button type="button" id="contactSubmit" class="btn-submit">Submit</button>
+											<div class="col-md-6 mb-2  mbl-view-btn2">
+												<div class="icon-label">
+													<button type="button" class="btn heart-react heart" id="btn-Love">
+														<div class="icon-label-content">
+															<i class="fa fa-heart icon-set mg-icn"></i>
+															<span class="heart-label">Love It</span> <!-- Label for Heart -->
+														</div>
+													</button>
 												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+
+
+									<div class="button-container mt-3">
+										<div class="row">
+											<div class="col-md-6 btn-mbl-reset">
+										<button type="reset" class="btn-reset">Reset</button>
+											</div>
+											<div class="col-md-6 btn-mbl-submit">
+										<button type="button" id="contactSubmit" class="btn-submit">Submit</button>
+								
+									</div>
+									</div>
+									</div>
+
 											</form>
 
 							
@@ -637,20 +652,12 @@
 			</div>
 
 			<div class="icon-label mt-3" >
-				<button type="button" class="btn heart-react" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+				<button type="button" class="btn heart-react heart" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 					<i class="fa fa-heart icon-set mg-icn"></i>
 				</button>
 			
 			</div>
-		@* 	<button type="button" class="btn green" id="">
-				<i id="" class="fa fa-thumbs-up fa-lg default-clr toggle-color-btn"></i>
-						</button>
-
-
-					<div class="heart-react-Home">
-						<i class="icon-set"></i>
-						<span class="txt-span">liked!</span>
-					</div> *@
+		
 			<ul class="social-media-list mt-6">
 				<li>
 					<a href="https://www.facebook.com/profile.php?id=61558886634641" target="_blank" class="contact-icon">
@@ -692,24 +699,53 @@
 	
 	<script>
 
+		// document.addEventListener('DOMContentLoaded', function () {
+		// 	// Handle button clicks to ensure only one is selected at a time
+		// 	$(".icon-label button").on("click", function () {
+		// 		// Remove 'selected' class and reset color from all buttons
+		// 		$(".icon-label button .icon-set, .icon-label button .toggle-color-btn").css("color", ""); // Reset color
+		// 		$(".icon-label button").removeClass("selected");
+
+		// 		// Add 'selected' class to the clicked button
+		// 		$(this).addClass("selected");
+
+		// 		// Apply color based on which button was clicked
+		// 		if ($(this).find('.icon-set').length) {
+		// 			$(this).find('.icon-set').css("color", "red");
+		// 		} else if ($(this).find('.toggle-color-btn').length) {
+		// 			$(this).find('.toggle-color-btn').css("color", "green");
+		// 		}
+		// 	});
+		// });
+
+
 		document.addEventListener('DOMContentLoaded', function () {
-			// Handle button clicks to ensure only one is selected at a time
-			$(".icon-label button").on("click", function () {
-				// Remove 'selected' class and reset color from all buttons
-				$(".icon-label button .icon-set, .icon-label button .toggle-color-btn").css("color", ""); // Reset color
-				$(".icon-label button").removeClass("selected");
+			// Handle button clicks to ensure only one class is selected at a time
+			document.querySelectorAll(".icon-label button").forEach(function (button) {
+				button.addEventListener("click", function () {
+					// Get the class of the clicked button
+					const clickedClass = this.classList.contains('heart') ? 'heart' : 'green';
 
-				// Add 'selected' class to the clicked button
-				$(this).addClass("selected");
+					// Remove 'selected' class from all buttons and reset colors
+					document.querySelectorAll(".icon-label button").forEach(function (btn) {
+						// Remove selected class and reset color from all buttons
+						btn.classList.remove("selected");
+						btn.querySelectorAll(".icon-set, .toggle-color-btn").forEach(function (icon) {
+							icon.style.color = ""; // Reset color
+						});
+					});
 
-				// Apply color based on which button was clicked
-				if ($(this).find('.icon-set').length) {
-					$(this).find('.icon-set').css("color", "red");
-				} else if ($(this).find('.toggle-color-btn').length) {
-					$(this).find('.toggle-color-btn').css("color", "green");
-				}
+					// Add 'selected' class and apply color to the buttons of the clicked class
+					document.querySelectorAll(`.icon-label button.${clickedClass}`).forEach(function (btn) {
+						btn.classList.add("selected");
+						btn.querySelectorAll(".icon-set, .toggle-color-btn").forEach(function (icon) {
+							icon.style.color = clickedClass === 'heart' ? 'red' : 'green';
+						});
+					});
+				});
 			});
 		});
+
 
 
 
@@ -778,16 +814,16 @@
 					FirstName: $("#first-name").val(),
 					LastName: $("#last-name").val(),
 					Dob: $("#dob").val(),  // Ensure the date format is compatible with your server
-					Contact1: parseInt($("#contact").val(), 10),  // Convert to integer
+					Contact1: $("#contact").val(),  
 					month: 1,  // Convert to integer
 					likereaction: parseInt($("#btn-Like").hasClass("selected") ? 1 : 0, 10),
 					lovereaction: parseInt($("#btn-Love").hasClass("selected") ? 1 : 0, 10),
-					Contact2: $("#contact2").val() ? parseInt($("#contact2").val(), 10) : 0,  // Convert to integer or null
+					Contact2:  $("#contact2").val(),  
 					Email: $("#email").val(),
 					Address: $("#address").val(),
 					Message: $("#message").val(),
 				};
-				alert(JSON.stringify(formData));
+				console.log(JSON.stringify(formData));
 
 				// AJAX request to submit form data
 				$.ajax({
@@ -798,13 +834,15 @@
 					dataType: 'json',
 					contentType: 'application/json',
 					success: function (response) {
-						// console.log('Response:', response);
-						// console.log('Status:', response.status);
-
 						if (response && response.status === true) {
-							toastr.success('Contact info submitted successfully!');
-							$("#contact-form")[0].reset();
+							// Extract first name and last name from formData
+							var firstName = formData.FirstName || 'User';
+							var lastName = formData.LastName || '';
 
+
+							// Show success message with first name and last name
+							toastr.success('Contact information of ' + firstName + ' ' + lastName + ' submitted successfully!');
+							$("#contact-form")[0].reset();
 							$("#btn-Like").removeClass("selected");
 							$("#btn-Love").removeClass("selected");
 							$(".input-error").removeClass("input-error");
@@ -814,12 +852,13 @@
 						}
 					},
 					error: function (xhr, status, error) {
-						// console.log('Error:', error);
-						// console.log('Status:', status);
-
-						toastr.error('Contact info submission failed. Please try again. Please try again or contact admin!');
+						console.error('AJAX Error:', error);
+						console.error('Status:', status);
+						toastr.error('Contact info submission failed. Please try again or contact admin!');
 					}
 				});
+
+
 
 
 			}
@@ -1112,6 +1151,9 @@
 		const indicatorsContainer = document.getElementById('carousel-indicators');
 		const innerContainer = document.getElementById('carousel-inner');
 
+		// Define the static heading title
+		const headingTitle = "Events";
+
 		// Generate carousel indicators and items
 		data.events.forEach((event, index) => {
 			// Create indicator
@@ -1135,7 +1177,16 @@
 			img.alt = event.name;
 
 			const caption = document.createElement('div');
-			caption.classList.add('carousel-caption', 'd-none', 'd-md-block');
+			caption.classList.add('carousel-caption', 'd-none', 'd-md-flex');
+
+			// Add static heading title
+			const heading = document.createElement('h4');
+			heading.classList.add('carousel-heading');
+			heading.textContent = headingTitle;
+			caption.appendChild(heading);
+
+			const textContainer = document.createElement('div');
+			textContainer.classList.add('carousel-text');
 
 			const title = document.createElement('h5');
 			title.textContent = event.name;
@@ -1143,14 +1194,18 @@
 			const description = document.createElement('p');
 			description.textContent = event.remarks;
 
-			caption.appendChild(title);
-			caption.appendChild(description);
+			textContainer.appendChild(title);
+			textContainer.appendChild(description);
+
+			caption.appendChild(textContainer);
 
 			item.appendChild(img);
 			item.appendChild(caption);
 
 			innerContainer.appendChild(item);
 		});
+
+
 
 		//reactions graph start
 		document.addEventListener('DOMContentLoaded', function () {
@@ -1171,7 +1226,7 @@
 						const dataItem = rawData.data;					
 
 						dataItem.forEach(function (stat) {
-							alert(JSON.stringify(stat));
+							//alert(JSON.stringify(stat));
 							labels.push(stat.monthName);
 							likeData.push(stat.likecount);
 							loveData.push(stat.lovecount);
@@ -1262,6 +1317,11 @@
 		//reactions graph end
 
 
-
+		// Get the current date
+		var today = new Date();
+		// Format the date as YYYY-MM-DD
+		var formattedDate = today.toISOString().split('T')[0];
+		// Set the max attribute of the date input
+		document.getElementById('dob').setAttribute('max', formattedDate);
 	</script>
 	</body>

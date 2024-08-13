@@ -10,8 +10,8 @@ namespace _4DimenssionLLC.ViewModels {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime? Dob { get; set; } // Date type in C#
-        public int Contact1 { get; set; }
-        public int? Contact2 { get; set; } // Nullable in case the second contact is not provided
+        public string Contact1 { get; set; }
+        public string? Contact2 { get; set; } // Nullable in case the second contact is not provided
         public string Email { get; set; }
         public string Address { get; set; }
         public string Message { get; set; }

@@ -75,6 +75,13 @@ namespace _4DimenssionLLC.Controllers
 		public async Task<BlazorResponseViewModel> AddContacts([FromBody] ContactFormViewModel pModel)
 		{
 			BlazorResponseViewModel response = new BlazorResponseViewModel();
+			if (pModel == null)
+			{
+				response.status = false;
+				response.message = "No data provided.";
+				return response;
+			}
+
 			try
 			{
 				Int64 contactId = Convert.ToInt64(pModel.Id);
@@ -87,22 +94,31 @@ namespace _4DimenssionLLC.Controllers
 			{
 				response.status = false;
 				if (ex.Message.ToLower().Contains("unique"))
-					response.message = "Opinion | contact from user already submitted!!!";
+					response.message = "This email already submitted by user.";
 				else
 					response.message = ex.Message;
+
+				// Log exception details
+				_logger.LogError(ex, "SQLiteException occurred while saving contact form.");
 			}
 			catch (SqlException ex)
 			{
 				response.status = false;
 				if (ex.Message.ToLower().Contains("unique"))
-					response.message = "Opinion | contact from user already submitted!!!";
+					response.message = "This email already submitted by user.";
 				else
 					response.message = ex.Message;
+
+				// Log exception details
+				_logger.LogError(ex, "SqlException occurred while saving contact form.");
 			}
 			catch (Exception ex)
 			{
 				response.status = false;
 				response.message = ex.Message;
+
+				// Log exception details
+				_logger.LogError(ex, "Exception occurred while saving contact form.");
 			}
 			return response;
 		}

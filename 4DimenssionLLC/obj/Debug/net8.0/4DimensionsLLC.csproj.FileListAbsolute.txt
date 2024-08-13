@@ -117,3 +117,4 @@ D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Debug\net8.0\refint\4Dimens
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Debug\net8.0\4DimensionsLLC.pdb
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Debug\net8.0\4DimensionsLLC.genruntimeconfig.cache
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Debug\net8.0\ref\4DimensionsLLC.dll
+C:\Blazor Projects\4dimensionsllcweb\4DimenssionLLC\bin\Debug\net8.0\4dimsllc.db

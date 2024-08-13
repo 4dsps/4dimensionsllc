@@ -52,7 +52,7 @@ li {
 }
 
 .title {
-    font-size: 2em;
+    font-size: 3em;
     font-family: 'Times New Roman' !important;
 }
 .float-left{
@@ -438,12 +438,12 @@ header {
 
 .row {
     display: flex;
-    gap: 30px;
+   /* gap: 30px;*/
 }
 
-.col-md-6{
+/*.col-md-6{
     width:48%!important;
-}
+}*/
 @media (max-width: 767px) { /* Adjust the breakpoint as needed */
     .profile-row {
         flex-direction: column;
@@ -583,7 +583,9 @@ header {
         color: #3077e8;
         float: left;
     }
-
+.scroll-link{
+    cursor:pointer;
+}
 @media (max-width:600px) {
     .section0 {
         display: flex;
@@ -912,10 +914,10 @@ header {
 .hr-color {
     background-color: rgb(20 52 90) !important;
     background: rgb(20 52 90) !important;
-    border: 4px solid rgb(20 52 90)!important;
+    border: 4px solid rgb(44 159 194)!important;
     width: 100%;
     margin: 0 !important;
-    opacity:333;
+    opacity: 333;
 }
 .footer {
     width: 100%;
@@ -1238,8 +1240,51 @@ header {
         .main-timeline .timeline:nth-child(4n+4) .timeline-content:after {
             background: var(--orange2);
         }
+.btn-mbl-reset {
+  text-align:right;
+}
 
+.btn-mbl-submit {
+   text-align:left;
+}
 @media screen and (max-width:767px) {
+    .btn-mbl-reset{
+        width:45%;
+    }
+    .btn-mbl-submit {
+        width:45%;
+    }
+    .icon-col {
+        flex: 1 1 100%; /* Full width on small screens */
+        text-align: center; /* Center text on small screens */
+        margin-bottom: 10px; /* Add space between buttons */
+    }
+    .gap-add{
+        margin-bottom:14px;
+    }
+    .mbl-view-btn2 {
+        width: 70%;
+        margin-top: 10px;
+    }
+    .mbl-view-btn {
+        width: 28%;
+        margin-top: 10px;
+    }
+    .lbl-tab {
+        font-weight: 700;
+        font-size: 18px !important;
+        display: block !important;
+        float: left !important;
+        width: 45% !important;
+        padding: 0.7em !important;
+        margin-left: 10px;
+        border-radius: 10px;
+        color: #200e0e;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center !important;
+        background: #00b4cf;
+    }
     .right-inner-container {
         width: 90%!important;
         height: 100%;
@@ -1859,8 +1904,11 @@ hr {
     float:inline-end;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-    .footer{
-        padding-left:1em;
+    .lbl-tab{
+        width:45%!important;
+    }
+    .footer {
+        padding-left: 1em;
     }
     .contact-text{
         margin-left:0px!important;
@@ -2587,7 +2635,7 @@ figure.snip1390 blockquote {
     color: white !important; /* White text color */
     padding: 10px; /* Add some padding for readability */
     border-radius: 5px; /* Optional: round the corners */
-    margin-left: -12.3em;
+    margin-left: -11em;
     width: 98%;
 }
 
@@ -2613,7 +2661,7 @@ figure.snip1390 blockquote {
     font-family: "Sora", sans-serif;
     max-width: 90%;
     min-width: 320px;
-    margin: 50px auto;
+    margin: 5px auto;
     padding: 0 50px;
 }
 
@@ -2713,7 +2761,7 @@ figure.snip1390 blockquote {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Distribute space between items */
-    padding: 15px; /* Adjust padding as needed */
+    padding: 5px; /* Adjust padding as needed */
     border-bottom: 1px solid #ffffff52;
 }
 
@@ -2728,7 +2776,40 @@ figure.snip1390 blockquote {
     text-align: center;
     margin: 0;
 }
+.event-section {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.carousel-caption {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: flex-start; /* Align items to the start of the container */
+    padding: 20px;
+}
 
+.carousel-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 20px;
+    padding-top: 8px;
+}
+
+.carousel-text {
+    max-width: 60%;
+    margin-right: 1em;
+    width: 95%;
+    padding-bottom: 1em;
+}
+
+.carousel-caption h5 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.carousel-caption p {
+    margin: 0;
+    font-size: 1rem;
+}
 
 
 .headingFAq{
@@ -2776,7 +2857,7 @@ figure.snip1390 blockquote {
 /*tabs css start*/
 
 
-/*Fun begins*/
+/* Fun begins */
 .tab_container {
     width: 100%;
     margin: 0 auto;
@@ -2789,7 +2870,7 @@ figure.snip1390 blockquote {
     display: none;
 }
 
-label {
+.lbl-tab {
     font-weight: 700;
     font-size: 18px;
     display: block;
@@ -2812,8 +2893,9 @@ label {
 #tab5:checked ~ #content5 {
     display: block;
     padding: 20px;
-/*    background: #fff;
-*/    color: #999;
+    /* background: #fff; */
+    color: #999;
+    padding-bottom:0px;
     border-bottom: 2px solid #f0f0f0;
 }
 
@@ -2828,33 +2910,33 @@ label {
     text-align: center;
 }
 
-.tab_container [id^="tab"]:checked + label {
+.tab_container [id^="tab"]:checked + .lbl-tab {
     background: #00b4cf;
     box-shadow: inset 0 3px #0CE;
-    color:white;
+    color: white;
 }
 
-    .tab_container [id^="tab"]:checked + label .fa {
+    .tab_container [id^="tab"]:checked + .lbl-tab .fa {
         color: #fff;
     }
 
-label .fa {
+.lbl-tab .fa {
     font-size: 1.3em;
     margin: 0 0.4em 0 0;
 }
 
-/*Media query*/
+/* Media query */
 @media only screen and (max-width: 900px) {
-    label span {
+  /*  .lbl-tab span {
         display: none;
-    }
+    }*/
 
     .tab_container {
         width: 98%;
     }
 }
 
-/*Content Animation*/
+/* Content Animation */
 @keyframes fadeInScale {
     0% {
         transform: scale(0.9);
@@ -2875,7 +2957,6 @@ label .fa {
 .link {
     text-align: center;
 }
-
 
 
 /*tabs css end*/
