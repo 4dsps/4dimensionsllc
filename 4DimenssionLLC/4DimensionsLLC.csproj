@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -6,6 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>_4DimenssionLLC</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="4dimsllc.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="4dimsllc.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="bin\Debug\4dimsllc.db" />

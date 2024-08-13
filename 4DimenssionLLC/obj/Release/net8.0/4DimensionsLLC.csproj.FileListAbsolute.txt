@@ -87,3 +87,4 @@ D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\bin\Release\net8.0\runtimes\win
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\bin\Release\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\4DimensionsLLC.csproj.AssemblyReference.cache
 D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\obj\Release\net8.0\4Dimensi.B6821E4E.Up2Date
+D:\Blazor Projects\4Dimensionsllc\4DimenssionLLC\bin\Release\net8.0\4dimsllc.db

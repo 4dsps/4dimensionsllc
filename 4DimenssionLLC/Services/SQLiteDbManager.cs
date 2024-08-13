@@ -166,9 +166,9 @@ namespace _4DimenssionLLC.services
 
 			}		
 		}
-		public static ContactsStatsViewModel GetContactStats()
+		public static List<ContactsStatsViewModel> GetContactStats()
 		{
-			ContactsStatsViewModel stats = null;
+			List<ContactsStatsViewModel> ls = new List<ContactsStatsViewModel>();
 
 			if (sqliteConn == null)
 				sqliteConn = GetSQLiteConnection();
@@ -185,19 +185,25 @@ namespace _4DimenssionLLC.services
                select lovecount,likecount,case month when 1 then 'JAN'  when 2 then 'FEB' when 3 then 'MAR' when 4 then 'APR' when 5 then 'MAY'  when 6 then 'JUN' when 7 then 'JUL' when 8 then 'AUG' when 9 then 'SEP' when 10 then 'OCT' when 11 then 'NOV'  else 'DEC' END MonthName from ( 
 select sum(lovereaction) lovecount, sum(likereaction) likecount, month from contactform
 group by month
-);";
+union all
+select 3 lovecount,8 likecount,7 month
+union all
+select 12 lovecount,8 likecount,6 month
+) order by month;";
 
 					using (var reader = sqlitecmd.ExecuteReader())
 					{
-						if (reader.Read())
+						while (reader.Read())
 						{
+							ContactsStatsViewModel stats = null;
 							stats = new ContactsStatsViewModel
 							{
 								lovecount = reader.GetInt32(reader.GetOrdinal("lovecount")),
 								likecount = reader.GetInt32(reader.GetOrdinal("likecount")),
 								MonthName = reader.GetString(reader.GetOrdinal("MonthName"))
 							};
-						}
+							ls.Add(stats);
+						}//while (reader.Read())
 					}
 				}
 			}
@@ -214,7 +220,7 @@ group by month
 					sqliteConn.Close();
 			}
 
-			return stats;
+			return ls;
 		}
 
 

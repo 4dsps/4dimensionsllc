@@ -765,7 +765,7 @@
 
 				// If validation fails, show error message and return
 				if (!isValid) {
-					toastr.error('Please fill in all required fields: First Name, Last Name, Email, and Contact.');
+					toastr.error('Please complete mandatory input & submit again!!!');
 					return;
 				}
 
@@ -787,7 +787,7 @@
 					Address: $("#address").val(),
 					Message: $("#message").val(),
 				};
-				console.log(JSON.stringify(formData));
+				alert(JSON.stringify(formData));
 
 				// AJAX request to submit form data
 				$.ajax({
@@ -802,7 +802,7 @@
 						// console.log('Status:', response.status);
 
 						if (response && response.status === true) {
-							toastr.success('Form data saved successfully!');
+							toastr.success('Contact info submitted successfully!');
 							$("#contact-form")[0].reset();
 
 							$("#btn-Like").removeClass("selected");
@@ -810,14 +810,14 @@
 							$(".input-error").removeClass("input-error");
 							$(".input-success").removeClass("input-success");
 						} else {
-							toastr.error(response.message || 'Form data could not be saved. Please try again.');
+							toastr.error(response.message || 'Contact info submission failed. Please try again or contact admin!!');
 						}
 					},
 					error: function (xhr, status, error) {
 						// console.log('Error:', error);
 						// console.log('Status:', status);
 
-						toastr.error('An error occurred while saving the form data. Please try again.');
+						toastr.error('Contact info submission failed. Please try again. Please try again or contact admin!');
 					}
 				});
 
@@ -1161,18 +1161,22 @@
 				try {
 					const response = await fetch('/Home/GetContactsStats');
 					const rawData = await response.json();
-					console.log('Fetched Data:', rawData); // Log the raw data to the console
+					//console.log('Fetched Data:', rawData); // Log the raw data to the console
 
 					// Check if the 'data' property exists and is an object
 					if (rawData && rawData.data) {
-						const dataItem = rawData.data;
+						let labels = [];
+						let likeData = [];
+						let loveData = [];
+						const dataItem = rawData.data;					
 
-						// Construct the data structure required by Chart.js
-						const labels = [dataItem.monthName];
-						const likeData = [dataItem.likecount];
-						const loveData = [dataItem.lovecount];
-						console.log('loveData:', JSON.stringify(loveData));
-						console.log('likeData:', JSON.stringify(likeData));
+						dataItem.forEach(function (stat) {
+							alert(JSON.stringify(stat));
+							labels.push(stat.monthName);
+							likeData.push(stat.likecount);
+							loveData.push(stat.lovecount);
+						});
+						
 						return {
 							labels: labels,
 							datasets: [
