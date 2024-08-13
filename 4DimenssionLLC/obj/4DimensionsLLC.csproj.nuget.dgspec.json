@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\4DimensionsLLC.csproj": {}
+    "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\4DimensionsLLC.csproj": {}
   },
   "projects": {
-    "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\4DimensionsLLC.csproj": {
+    "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\4DimensionsLLC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\4DimensionsLLC.csproj",
+        "projectUniqueName": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\4DimensionsLLC.csproj",
         "projectName": "4DimensionsLLC",
-        "projectPath": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\4DimensionsLLC.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\obj\\",
+        "projectPath": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\4DimensionsLLC.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
