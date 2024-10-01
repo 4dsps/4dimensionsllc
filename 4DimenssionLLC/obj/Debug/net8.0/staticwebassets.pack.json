@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\images\\Rivian-Europe-3-1024x565.jpg"
     },
     {
+      "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\adil.jpg",
+      "PackagePath": "staticwebassets\\images\\adil.jpg"
+    },
+    {
       "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\amazon.jpg",
       "PackagePath": "staticwebassets\\images\\amazon.jpg"
     },
@@ -95,6 +99,10 @@
     {
       "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\main-bg.jpg",
       "PackagePath": "staticwebassets\\images\\main-bg.jpg"
+    },
+    {
+      "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\myImg.jpg",
+      "PackagePath": "staticwebassets\\images\\myImg.jpg"
     },
     {
       "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\js\\site.js",

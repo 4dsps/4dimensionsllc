@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "X2fNzLp14a7lAQJZU4AclM1a5LxQjf8i8hdmk+Bzork=",
+  "Hash": "m/jGsb2AXicpb2w9b2G3vY5vQTii8OLsr0toZ3BB4tA=",
   "Source": "4DimensionsLLC",
   "BasePath": "_content/4DimensionsLLC",
   "Mode": "Default",
@@ -205,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\4dLogobacground.jpg"
+    },
+    {
+      "Identity": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\adil.jpg",
+      "SourceId": "4DimensionsLLC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\",
+      "BasePath": "_content/4DimensionsLLC",
+      "RelativePath": "images/adil.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\adil.jpg"
     },
     {
       "Identity": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\amazon.jpg",
@@ -452,6 +471,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\main-bg.jpg"
+    },
+    {
+      "Identity": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\myImg.jpg",
+      "SourceId": "4DimensionsLLC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\",
+      "BasePath": "_content/4DimensionsLLC",
+      "RelativePath": "images/myImg.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\myImg.jpg"
     },
     {
       "Identity": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\R.jpg",
