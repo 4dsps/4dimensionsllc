@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\images\\01.webp"
     },
     {
+      "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\0_amazon-delivery-van.webp",
+      "PackagePath": "staticwebassets\\images\\0_amazon-delivery-van.webp"
+    },
+    {
       "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\4D Logo with out no.-1.png",
       "PackagePath": "staticwebassets\\images\\4D Logo with out no.-1.png"
     },
@@ -41,6 +45,22 @@
       "PackagePath": "staticwebassets\\images\\R.jpg"
     },
     {
+      "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\Rivian-Europe-3-1024x565.jpg",
+      "PackagePath": "staticwebassets\\images\\Rivian-Europe-3-1024x565.jpg"
+    },
+    {
+      "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\amazon.jpg",
+      "PackagePath": "staticwebassets\\images\\amazon.jpg"
+    },
+    {
+      "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\benifits.png",
+      "PackagePath": "staticwebassets\\images\\benifits.png"
+    },
+    {
+      "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\download.jfif",
+      "PackagePath": "staticwebassets\\images\\download.jfif"
+    },
+    {
       "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\event1.jpg",
       "PackagePath": "staticwebassets\\images\\event1.jpg"
     },
@@ -59,6 +79,10 @@
     {
       "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\event5.jpg",
       "PackagePath": "staticwebassets\\images\\event5.jpg"
+    },
+    {
+      "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\image-main-2.png",
+      "PackagePath": "staticwebassets\\images\\image-main-2.png"
     },
     {
       "Id": "D:\\Blazor Projects\\4Dimensionsllc\\4DimenssionLLC\\wwwroot\\images\\logo-ico.ico",
