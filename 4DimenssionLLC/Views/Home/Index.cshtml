@@ -198,27 +198,26 @@
 		</table>
 	</div>
 
-	<div class="container section" id="dispatching" >
+	<div class="container " id="dispatching" >
 		<table>
 			<tr>
-				
 				<td class="pd-left">
 					<h1 class="title">Dispatching Services </h1>
 					<p class="dispatch-para">An opportunity to lead As a DSP, you are only as strong as your team of delivery associates. Your leadership won’t just set them up for success on the road today, but wherever their career takes them. Successful candidates are passionate about hiring and coaching, building a strong company culture, and giving back to the community.</p>
 					<div class="btn-center mb-4">
-						<a href="#moreaboutus" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn2">Discover More</a>
+						<a href="#Benefits" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn2">Discover More</a>
 
 					</div>
 				</td>
                 <td>
-					<img src="~/images/0_amazon-delivery-van.webp" class="inline-photo show-on-scroll img-setting" alt="About Us">
+					<img src="~/images/dashboard.jfif" class="inline-photo show-on-scroll img-setting" alt="About Us">
 				</td>
 			</tr>
 		</table>
 	</div>
 
 	<hr class="hr-color" />
-	<section class="slick" id="moreaboutus">
+	<section class="slick" id="Benefits">
 		<div class="banner mt-4">
 			<h1 class="title clr-black">Benefits We Offer</h1>
 			<h5 class="sub-title clr-black">Bringing New Business solutions and ideas</h5>
@@ -467,7 +466,7 @@
 				<p class="title">QUICK LINKS</p>
 				<p><a href="#humanManagement">Human Management</a></p>
 				<p><a href="#fleetManagement">Fleet Management</a></p> 
-				<p><a href="#dispatching">Dispatching Services</a></p>
+				<p><a href="#Benefits">Benefits</a></p>
 			</section>
 
 			<section class="sectionstyle">
@@ -612,8 +611,6 @@
 						
 					</div>
 
-					
-
 				
 				</div>
 				
@@ -692,26 +689,6 @@
 	
 	<script>
 
-		// document.addEventListener('DOMContentLoaded', function () {
-		// 	// Handle button clicks to ensure only one is selected at a time
-		// 	$(".icon-label button").on("click", function () {
-		// 		// Remove 'selected' class and reset color from all buttons
-		// 		$(".icon-label button .icon-set, .icon-label button .toggle-color-btn").css("color", ""); // Reset color
-		// 		$(".icon-label button").removeClass("selected");
-
-		// 		// Add 'selected' class to the clicked button
-		// 		$(this).addClass("selected");
-
-		// 		// Apply color based on which button was clicked
-		// 		if ($(this).find('.icon-set').length) {
-		// 			$(this).find('.icon-set').css("color", "red");
-		// 		} else if ($(this).find('.toggle-color-btn').length) {
-		// 			$(this).find('.toggle-color-btn').css("color", "green");
-		// 		}
-		// 	});
-		// });
-
-
 		document.addEventListener('DOMContentLoaded', function () {
 			// Handle button clicks to ensure only one class is selected at a time
 			document.querySelectorAll(".icon-label button").forEach(function (button) {
@@ -739,17 +716,10 @@
 			});
 		});
 
-
-
-
-
-
 		$(document).ready(function () {
-	
 			// Function to handle form submission and validation
 			function handleFormSubmit() {
 				var isValid = true;
-
 				// Get the values of the required fields
 				var firstName = $("#first-name").val();
 				var lastName = $("#last-name").val();
@@ -861,10 +831,6 @@
 				handleFormSubmit(); // Handle form submission including validation
 			});
 
-
-		
-
-
 			$("#lblContact").click(function () {
 				if ($(window).width() < 768) { // Assuming 768 pixels is the threshold for mobile view
 					$(".icon").click();
@@ -890,27 +856,27 @@
 			});
 		});
 
-		// var acc = document.getElementsByClassName("accordion");
-		// var i;
+		var acc = document.getElementsByClassName("accordion");
+		var i;
 
-		// for (i = 0; i < acc.length; i++) {
-		// 	acc[i].addEventListener("click", function () {
-		// 		this.classList.toggle("active");
-		// 		var panel = this.nextElementSibling;
-		// 		if (panel.style.maxHeight) {
-		// 			panel.style.maxHeight = null;
-		// 		} else {
-		// 			panel.style.maxHeight = panel.scrollHeight + "px";
-		// 		}
-		// 	});
-		// }
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.maxHeight) {
+					panel.style.maxHeight = null;
+				} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+				}
+			});
+		}
 		window.onscroll = function () { scrollFunction() };
 		function scrollFunction() {
 			if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
 				document.getElementById("navbar").style.top = "0";
 				document.getElementById("scroll-up").style.display = "block";
 			} else {
-				document.getElementById("navbar").style.top = "-119px";
+				document.getElementById("navbar").style.top = "-145px";
 				document.getElementById("scroll-up").style.display = "none";
 			}
 		}
@@ -1088,21 +1054,15 @@
 			});
 		}
 	
-
 		document.addEventListener('DOMContentLoaded', function () {
 			const blockquotes = document.querySelectorAll('figure.snip1390 blockquote');
-
 			blockquotes.forEach(blockquote => {
 				const text = blockquote.innerHTML;
 				blockquote.innerHTML = `${text}<span class="close-quote">”</span>`;
 			});
 		});
 
-		
 		const container = document.getElementById('our-team');
-
-		// Assuming 'container' is the parent element where the profiles will be appended
-
 		if (!container) {
 			console.error('Container element not found');
 		}
@@ -1152,18 +1112,16 @@
 			// Create indicator
 			const indicator = document.createElement('button');
 			indicator.type = 'button';
-			indicator.setAttribute('data-bs-target', '#carouselExampleDark');
+			indicator.setAttribute('data-bs-target','#carouselExampleDark');
 			indicator.setAttribute('data-bs-slide-to', index);
 			if (index === 0) indicator.classList.add('active');
 			indicator.setAttribute('aria-current', index === 0 ? 'true' : 'false');
 			indicator.setAttribute('aria-label', `Slide ${index + 1}`);
 			indicatorsContainer.appendChild(indicator);
-
 			// Create carousel item
 			const item = document.createElement('div');
 			item.classList.add('carousel-item');
 			if (index === 0) item.classList.add('active');
-
 			const img = document.createElement('img');
 			img.src = event.pics[0]; // Use the first image in the pics array
 			img.classList.add('d-block', 'w-100');

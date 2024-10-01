@@ -29,6 +29,14 @@
       "PackagePath": "staticwebassets\\images\\4DLogo2.png"
     },
     {
+      "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\4DSPS_SS1.png",
+      "PackagePath": "staticwebassets\\images\\4DSPS_SS1.png"
+    },
+    {
+      "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\4DSPS_SS7.png",
+      "PackagePath": "staticwebassets\\images\\4DSPS_SS7.png"
+    },
+    {
       "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\4dLogo.png",
       "PackagePath": "staticwebassets\\images\\4dLogo.png"
     },
@@ -41,10 +49,6 @@
       "PackagePath": "staticwebassets\\images\\Footer.png"
     },
     {
-      "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\R.jpg",
-      "PackagePath": "staticwebassets\\images\\R.jpg"
-    },
-    {
       "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\Rivian-Europe-3-1024x565.jpg",
       "PackagePath": "staticwebassets\\images\\Rivian-Europe-3-1024x565.jpg"
     },
@@ -53,12 +57,12 @@
       "PackagePath": "staticwebassets\\images\\adil.jpg"
     },
     {
-      "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\amazon.jpg",
-      "PackagePath": "staticwebassets\\images\\amazon.jpg"
-    },
-    {
       "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\benifits.png",
       "PackagePath": "staticwebassets\\images\\benifits.png"
+    },
+    {
+      "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\dashboard.jfif",
+      "PackagePath": "staticwebassets\\images\\dashboard.jfif"
     },
     {
       "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\download.jfif",
@@ -83,6 +87,10 @@
     {
       "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\event5.jpg",
       "PackagePath": "staticwebassets\\images\\event5.jpg"
+    },
+    {
+      "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\image-main-2-removebg-preview.png",
+      "PackagePath": "staticwebassets\\images\\image-main-2-removebg-preview.png"
     },
     {
       "Id": "C:\\Blazor Projects\\4dimensionsllcweb\\4DimenssionLLC\\wwwroot\\images\\image-main-2.png",
